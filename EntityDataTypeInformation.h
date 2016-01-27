@@ -24,51 +24,55 @@ namespace NS_DataIndex {
          * 参数：数据类型结构长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataStructureLength(uint32_t iDataStructureLength);
+        bool setDataStructureLength(const uint32_t iDataStructureLength);
 
         /**
          * 说明：设置数据类型名称长度
          * 参数：数据类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataNameLength(uint32_t iDataNameLength);
+        bool setDataNameLength(const uint32_t iDataNameLength);
 
         /**
          * 说明：设置数据类型名称
          * 参数：数据类型名称
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataName(uint8_t * iDataName);
+        bool setDataName(const uint8_t * iDataName);
 
         /**
          * 说明：设置对应块号
          * 参数：对应块号
          * 返回值：是否设置成功
          * 更新时间:2016/1/27*/
-        bool setBlockNumber(uint32_t iBlockNumber);
+        bool setBlockNumber(const uint32_t iBlockNumber);
 
         /**
          * 说明：获取数据类型结构长度
          * 返回值：数据类型结构长度
          * 更新时间：2016/1/27*/
+        const
         uint32_t getDataStructureLength();
 
         /**
          * 说明：获取数据类型名称长度
          * 返回值：数据类型名称长度
          * 更新时间：2016/1/27*/
+        const
         uint32_t getDataNameLength();
 
         /**
          * 说明：获取数据类型名称
          * 返回值：数据类型名称
          * 更新时间：2016/1/27*/
+        const
         uint8_t *getDataName();
 
         /**
          * 说明：获取对应块号
          * 返回值：对应块号
          * 更新时间：2016/1/27*/
+        const
         uint32_t getBlockNumber();
 
     };

@@ -7,6 +7,7 @@
 #include "EntityDataTypeInformation.h"
 
 namespace NS_DataIndex {
+
     /**
      * 说明：引导区文件（数据库基本信息）
      * 创建人：林宇斌
@@ -29,51 +30,55 @@ namespace NS_DataIndex {
          * 参数：数据库名称
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDatabaseName(uint8_t *iDatabaseName);
+        bool setDatabaseName(const uint8_t *iDatabaseName);
 
         /**
          * 说明：设置初始块数量
          * 参数：初始块数量
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setInitBlockNumber(uint32_t iInitBlockNumber);
+        bool setInitBlockNumber(const uint32_t iInitBlockNumber);
 
         /**
          * 说明：设置单次扩充块数量
          * 参数：单次扩充块数量
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setSingleExpandBlockNumber(uint32_t iSingleExpandBlockNumber);
+        bool setSingleExpandBlockNumber(const uint32_t iSingleExpandBlockNumber);
 
         /**
          * 说明：设置新扩充块数
          * 参数：新扩充块数
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setNewExpandBlockNumber(uint32_t iNewExpandBlockNumber);
+        bool setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber);
 
         /**
          * 说明：获取数据库名称
          * 返回值：数据库名称
          * 更新时间：2016/1/27*/
+        const
         uint8_t *getDatabaseName();
 
         /**
          * 说明：获取初始块数量
          * 返回值：初始块数量
          * 更新时间：2016/1/27*/
+        const
         uint32_t getInitBlockNumber();
 
         /**
          * 说明：获取单次扩充块数量
          * 返回值：单次扩充块数量
          * 更新时间：2016/1/27*/
+        const
         uint32_t getSingleExpandBlockNumber();
 
         /**
          * 说明：获取新扩充块数
          * 返回值：新扩充块数
          * 更新时间：2016/1/27*/
+        const
         uint32_t getNewExpandBlockNumber();
     };
 
