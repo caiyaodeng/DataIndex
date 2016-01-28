@@ -4,7 +4,7 @@
 #include "EntityAllDataTypeSet.h"
 asd
 using namespace std;
-
+    baks；
     int main(){
         NS_DataIndex::DataTypeStructure *objDataTypeStructure = new NS_DataIndex::DataTypeStructure();
         NS_DataIndex::AllDataTypeSet *objAllDataTypeSet = new NS_DataIndex::AllDataTypeSet();
