@@ -15,14 +15,13 @@ namespace NS_DataIndex {
         uint32_t m_iDataNameLength;         //数据类型名称长度
         uint8_t *m_iDataName;               //数据类型名称
         uint32_t m_iBlockNumber;            //对应块号
-    public:
 
+    public:
         explicit
         DataTypeInformation();
         ~DataTypeInformation();
 
     public:
-
         /**
          * 说明：设置数据类型结构长度
          * 参数：数据类型结构长度

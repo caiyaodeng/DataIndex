@@ -1,50 +1,26 @@
 #include <iostream>
+#include <stdint.h>
 #include "EntityDataTypeStructure.h"
-#include "EntityDataTypeInformation.h"
 #include "EntityAllDataTypeSet.h"
+#include "EntityDataTypeInformation.h"
+#include "EntityTableSpace.h"
+#include "EntityAllTableSet.h"
+#include "EntitySingleTablePropertyStructure.h"
+#include "EntityMyTableProperty.h"
+#include "EntityMyDataType.h"
 
 using namespace std;
-    baksllllllllllll;
-    int main(){
-        NS_DataIndex::DataTypeStructure *objDataTypeStructure = new NS_DataIndex::DataTypeStructure();
-        NS_DataIndex::AllDataTypeSet *objAllDataTypeSet = new NS_DataIndex::AllDataTypeSet();
-        //objDataTypeStructure->setDatabaseName((uint8_t *)"lll");
-        objDataTypeStructure->setInitBlockNumber(1);
-        objDataTypeStructure->setNewExpandBlockNumber(2);
-        //objDataTypeStructure->setSingleExpandBlockNumber(3);
-        objAllDataTypeSet->setDataTypeNumber(4);
-        //objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->setBlockNumber(5);
-        //objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->setDataName((uint8_t *)"China2");
-        //objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->setDataNameLength(6);
-        //objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->setDataStructureLength(7);
 
-        //uint8_t *DatabaseName;
-        //uint8_t *DataName;
-        uint32_t InitBlockNumber,NewExpandBlockNumber,DataTypeNumber;
-        //,SingleExpandBlockNumber,BlockNumber,DataNameLength,DataStructureLength;
-        //DatabaseName = objDataTypeStructure->getDatabaseName();
-        InitBlockNumber = objDataTypeStructure->getInitBlockNumber();
-        NewExpandBlockNumber = objDataTypeStructure->getNewExpandBlockNumber();
-        //SingleExpandBlockNumber = objDataTypeStructure->getSingleExpandBlockNumber();
-        DataTypeNumber = objAllDataTypeSet->getDataTypeNumber();
-        //BlockNumber = objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->getBlockNumber();
-        //DataName = objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->getDataName();
-        //DataNameLength = objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->getDataNameLength();
-        //DataStructureLength = objDataTypeStructure->m_objAllDataTypeSet->m_objDataTypeInformation->getDataStructureLength();
+int main(){
+        NS_DataIndex::MyDataType *objMyDataType = new NS_DataIndex::MyDataType();
 
-        //cout << "DatabaseName " << DatabaseName <<endl;
-        cout << "InitBlockNumber " << InitBlockNumber <<endl;
-        cout << "NewExpandBlockNumber " << NewExpandBlockNumber <<endl;
-        //cout << "SingleExpandBlockNumber " << SingleExpandBlockNumber <<endl;
-        cout << "DataTypeNumber " << DataTypeNumber <<endl;
-        //cout << "BlockNumber " << BlockNumber <<endl;
-        //cout << "DataName " << DataName <<endl;
-        //cout << "DataNameLength " << DataNameLength <<endl;
-        //cout << "DataStructureLength " << DataStructureLength <<endl;
+        uint8_t *Dname3;
+        objMyDataType->setTypeName((uint8_t *)"Ion");
 
-        //delete objDataTypeStructure;
-        //objDataTypeStructure = NULL;
+        Dname3 = (uint8_t*)objMyDataType->getTypeName();
+        cout<< Dname3 <<"   "<<endl;
+
         return 0;
 
 
-    }
+}

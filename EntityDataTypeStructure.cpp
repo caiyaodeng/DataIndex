@@ -8,7 +8,7 @@ namespace NS_DataIndex {
             m_iInitBlockNumber(0),
             m_iSingleExpandBlockNumber(0),
             m_iNewExpandBlockNumber(0),
-            m_objAllDataTypeSet(NULL){
+            m_objAllDataTypeSet(NULL) {
                 m_objAllDataTypeSet = new AllDataTypeSet();
                 m_iDatabaseName = (uint8_t *)malloc(20);
                 memset(m_iDatabaseName,0,20);
