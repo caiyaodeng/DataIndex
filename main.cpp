@@ -2,7 +2,7 @@
 #include "EntityDataTypeStructure.h"
 #include "EntityDataTypeInformation.h"
 #include "EntityAllDataTypeSet.h"
-sadasdsa
+
 using namespace std;
     baksllllllllllll;
     int main(){
