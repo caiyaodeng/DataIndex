@@ -11,14 +11,16 @@ namespace NS_DataIndex {
      * 创作人:林宇斌
      * 更新时间：2016/1/28*/
     class AllDataTypeSet {
+
         uint32_t m_iDataTypeNumber;                         //数据类型数量
         DataTypeInformation *m_objDataTypeInformation;      //单数据类型结构信息对象
 
     public:
+        explicit
         AllDataTypeSet();
         ~AllDataTypeSet();
-    public:
 
+    public:
         /**
          * 说明：设置数据类型数量
          * 参数：数据类型数量

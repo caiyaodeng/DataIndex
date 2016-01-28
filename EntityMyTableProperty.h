@@ -1,5 +1,5 @@
-#ifndef ENTITY_MY_TABLE_PROPERTY_H_
-#define ENTITY_MY_TABLE_PROPERTY_H_
+#ifndef ENTITYMYTABLEPROPERTY_H_
+#define ENTITYMYTABLEPROPERTY_H_
 
 #include "EntityMyDataType.h"
 
@@ -14,13 +14,18 @@ namespace NS_DataIndex {
         MyDataType *m_objMyDataType;        //我的数据类型对象
 
 
-        /**************************内容添加**********************
-        ******************************************************/
+        /**************************内容添加**********************/
+        /******************************************************/
 
     public:
+        explicit
         MyTableProperty();
         ~MyTableProperty();
+
     public:
 
     };
+
 }
+
+#endif /* ENTITYMYTABLEPROPERTY_H_ */

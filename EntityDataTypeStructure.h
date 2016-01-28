@@ -11,13 +11,14 @@ namespace NS_DataIndex {
      * 创建人：林宇斌
      * 更新时间：2016/1/27*/
     class DataTypeStructure {
+
         uint8_t *m_iDatabaseName;               //数据库名称
         uint32_t m_iInitBlockNumber;            //初始块数量
         uint32_t m_iSingleExpandBlockNumber;    //单次扩充块数量
         uint32_t m_iNewExpandBlockNumber;       //新扩充块数
         AllDataTypeSet *m_objAllDataTypeSet;    //所有数据类型对象
-    public:
 
+    public:
         explicit
         DataTypeStructure();
         ~DataTypeStructure();
