@@ -4,10 +4,10 @@ namespace NS_DataIndex {
 
     DataTypeInformation::DataTypeInformation()
     :
-        m_iDataStructureLength(-1),
-        m_iDataNameLength(-1),
+        m_iDataStructureLength(0),
+        m_iDataNameLength(0),
         m_iDataName(0),
-        m_iBlockNumber(-1) {
+        m_iBlockNumber(0) {
             m_iDataName = (uint8_t *)malloc(20);
             memset(m_iDataName,0,20);
     }
@@ -23,7 +23,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     bool DataTypeInformation::setDataStructureLength(const uint32_t iDataStructureLength) {
         m_iDataStructureLength = iDataStructureLength;
-        if (m_iDataStructureLength == -1) {
+        if (m_iDataStructureLength == 0) {
             return false;
         }
         return true;
@@ -36,7 +36,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     bool DataTypeInformation::setDataNameLength(const uint32_t iDataNameLength) {
         m_iDataNameLength = iDataNameLength;
-        if (m_iDataNameLength == -1) {
+        if (m_iDataNameLength == 0) {
             return false;
         }
         return true;
@@ -61,7 +61,7 @@ namespace NS_DataIndex {
      * 更新时间:2016/1/27*/
     bool DataTypeInformation::setBlockNumber(const uint32_t iBlockNumber) {
         m_iBlockNumber = iBlockNumber;
-        if (m_iBlockNumber == -1) {
+        if (m_iBlockNumber == 0) {
             return false;
         }
         return true;

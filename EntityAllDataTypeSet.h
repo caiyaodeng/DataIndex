@@ -1,9 +1,7 @@
 #ifndef ENTITY_ALL_DATA_TYPE_SET_H_
 #define ENTITY_ALL_DATA_TYPE_SET_H_
 
-#include <stdint.h>
-#include <stdlib.h>
-#include <string.h>
+
 #include "EntityDataTypeInformation.h"
 
 namespace NS_DataIndex {

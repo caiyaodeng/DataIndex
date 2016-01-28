@@ -5,9 +5,9 @@ namespace NS_DataIndex {
     DataTypeStructure::DataTypeStructure()
         :
             m_iDatabaseName(0),
-            m_iInitBlockNumber(-1),
-            m_iSingleExpandBlockNumber(-1),
-            m_iNewExpandBlockNumber(-1),
+            m_iInitBlockNumber(0),
+            m_iSingleExpandBlockNumber(0),
+            m_iNewExpandBlockNumber(0),
             m_objAllDataTypeSet(NULL){
                 m_objAllDataTypeSet = new AllDataTypeSet();
                 m_iDatabaseName = (uint8_t *)malloc(20);
@@ -40,7 +40,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     bool DataTypeStructure::setInitBlockNumber(const uint32_t iInitBlockNumber) {
         m_iInitBlockNumber = iInitBlockNumber;
-        if (m_iInitBlockNumber == -1){
+        if (m_iInitBlockNumber == 0){
             return false;
         }
         return true;
@@ -53,7 +53,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     bool DataTypeStructure::setSingleExpandBlockNumber(const uint32_t iSingleExpandBlockNumber) {
         m_iSingleExpandBlockNumber = iSingleExpandBlockNumber;
-        if (m_iSingleExpandBlockNumber == -1){
+        if (m_iSingleExpandBlockNumber == 0){
             return false;
         }
         return true;
@@ -66,7 +66,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     bool DataTypeStructure::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber) {
         m_iNewExpandBlockNumber = iNewExpandBlockNumber;
-        if (m_iNewExpandBlockNumber == -1){
+        if (m_iNewExpandBlockNumber == 0){
             return false;
         }
         return true;

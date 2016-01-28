@@ -3,7 +3,7 @@ namespace NS_DataIndex {
 
     AllDataTypeSet::AllDataTypeSet()
         :
-        m_iDataTypeNumber(-1),
+        m_iDataTypeNumber(0),
         m_objDataTypeInformation(NULL){
             m_objDataTypeInformation = new DataTypeInformation();
     }
@@ -18,7 +18,7 @@ namespace NS_DataIndex {
 
     bool AllDataTypeSet::setDataTypeNumber(const uint32_t iDataTypeNumber) {
         m_iDataTypeNumber = iDataTypeNumber;
-        if (m_iDataTypeNumber == -1)
+        if (m_iDataTypeNumber == 0)
             return false;
         return true;
     }
