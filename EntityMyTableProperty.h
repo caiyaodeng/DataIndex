@@ -14,6 +14,9 @@ namespace NS_DataIndex {
         MyDataType *m_objMyDataType;        //我的数据类型对象
 
 
+        /**************************内容添加**********************
+        ******************************************************/
+
     public:
         MyTableProperty();
         ~MyTableProperty();
