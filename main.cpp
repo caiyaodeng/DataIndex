@@ -2,9 +2,9 @@
 #include "EntityDataTypeStructure.h"
 #include "EntityDataTypeInformation.h"
 #include "EntityAllDataTypeSet.h"
-
+sadasdsa
 using namespace std;
-    baks；
+    baksllllllllllll;
     int main(){
         NS_DataIndex::DataTypeStructure *objDataTypeStructure = new NS_DataIndex::DataTypeStructure();
         NS_DataIndex::AllDataTypeSet *objAllDataTypeSet = new NS_DataIndex::AllDataTypeSet();
