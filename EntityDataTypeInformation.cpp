@@ -103,7 +103,5 @@ namespace NS_DataIndex {
         return m_iBlockNumber;
     }
 
-
-
 }
 

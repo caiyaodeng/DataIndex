@@ -1,6 +1,9 @@
 #ifndef ENTITY_DATA_TYPE_INFORMATION_H_
 #define ENTITY_DATA_TYPE_INFORMATION_H_
 
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
 namespace NS_DataIndex {
 
 /**
@@ -19,6 +22,7 @@ namespace NS_DataIndex {
         ~DataTypeInformation();
 
     public:
+
         /**
          * 说明：设置数据类型结构长度
          * 参数：数据类型结构长度

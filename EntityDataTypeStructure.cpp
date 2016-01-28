@@ -8,16 +8,16 @@ namespace NS_DataIndex {
             m_iInitBlockNumber(-1),
             m_iSingleExpandBlockNumber(-1),
             m_iNewExpandBlockNumber(-1),
-            m_objDataTypeInformation(NULL) {
+            m_objAllDataTypeSet(NULL){
+                m_objAllDataTypeSet = new AllDataTypeSet();
                 m_iDatabaseName = (uint8_t *)malloc(20);
                 memset(m_iDatabaseName,0,20);
-                m_objDataTypeInformation = new DataTypeStructure();
     }
 
     DataTypeStructure::~DataTypeStructure() {
-        if (m_objDataTypeInformation!=NULL){
-            delete m_objDataTypeInformation;
-            m_objDataTypeInformation = NULL;
+        if (m_objAllDataTypeSet != NULL) {
+            delete m_objAllDataTypeSet;
+            m_objAllDataTypeSet = NULL;
         }
     }
 
@@ -26,7 +26,7 @@ namespace NS_DataIndex {
      * 参数：数据库名称
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setDatabaseName(uint8_t *iDatabaseName) {
+    bool DataTypeStructure::setDatabaseName(const uint8_t *iDatabaseName) {
         memcpy(m_iDatabaseName,iDatabaseName,strlen((char *)iDatabaseName));
         if (m_iDatabaseName == 0)
             return false;
@@ -38,7 +38,7 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setInitBlockNumber(uint32_t iInitBlockNumber) {
+    bool DataTypeStructure::setInitBlockNumber(const uint32_t iInitBlockNumber) {
         m_iInitBlockNumber = iInitBlockNumber;
         if (m_iInitBlockNumber == -1){
             return false;
@@ -51,7 +51,7 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setSingleExpandBlockNumber(uint32_t iSingleExpandBlockNumber) {
+    bool DataTypeStructure::setSingleExpandBlockNumber(const uint32_t iSingleExpandBlockNumber) {
         m_iSingleExpandBlockNumber = iSingleExpandBlockNumber;
         if (m_iSingleExpandBlockNumber == -1){
             return false;
@@ -64,7 +64,7 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setNewExpandBlockNumber(uint32_t iNewExpandBlockNumber) {
+    bool DataTypeStructure::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber) {
         m_iNewExpandBlockNumber = iNewExpandBlockNumber;
         if (m_iNewExpandBlockNumber == -1){
             return false;
@@ -76,6 +76,7 @@ namespace NS_DataIndex {
      * 说明：获取数据库名称
      * 返回值：数据库名称
      * 更新时间：2016/1/27*/
+    const
     uint8_t *DataTypeStructure::getDatabaseName() {
         return m_iDatabaseName;
     }
@@ -84,6 +85,7 @@ namespace NS_DataIndex {
      * 说明：获取初始块数量
      * 返回值：初始块数量
      * 更新时间：2016/1/27*/
+    const
     uint32_t DataTypeStructure::getInitBlockNumber() {
         return m_iInitBlockNumber;
     }
@@ -92,6 +94,7 @@ namespace NS_DataIndex {
      * 说明：获取单次扩充块数量
      * 返回值：单次扩充块数量
      * 更新时间：2016/1/27*/
+    const
     uint32_t DataTypeStructure::getSingleExpandBlockNumber() {
         return m_iSingleExpandBlockNumber;
     }
@@ -100,6 +103,7 @@ namespace NS_DataIndex {
      * 说明：获取新扩充块数
      * 返回值：新扩充块数
      * 更新时间：2016/1/27*/
+    const
     uint32_t DataTypeStructure::getNewExpandBlockNumber() {
         return m_iNewExpandBlockNumber;
     }
