@@ -1,5 +1,5 @@
-#ifndef ENTITY_DATA_TYPE_STRUCTURE_H_
-#define ENTITY_DATA_TYPE_STRUCTURE_H_
+#ifndef _ENTITY_DATA_TYPE_STRUCTURE_H_
+#define _ENTITY_DATA_TYPE_STRUCTURE_H_
 
 
 #include "EntityDataTypeSet.h"

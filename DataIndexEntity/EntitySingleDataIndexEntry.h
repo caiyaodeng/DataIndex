@@ -1,5 +1,5 @@
-#ifndef ENTITY_SINGLE_DATA_INDEX_ENTRY_H_
-#define ENTITY_SINGLE_DATA_INDEX_ENTRY_H_
+#ifndef _ENTITY_SINGLE_DATA_INDEX_ENTRY_H_
+#define _ENTITY_SINGLE_DATA_INDEX_ENTRY_H_
 
 #include <stdint.h>
 #include <stdlib.h>

@@ -1,5 +1,5 @@
-#ifndef ENTITY_MY_DATA_TYPE_H_
-#define ENTITY_MY_DATA_TYPE_H_
+#ifndef _ENTITY_MY_DATA_TYPE_H_
+#define _ENTITY_MY_DATA_TYPE_H_
 
 #include <stdlib.h>
 #include <string.h>

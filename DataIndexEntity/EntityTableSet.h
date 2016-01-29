@@ -1,5 +1,5 @@
-#ifndef ENTITY_TABLE_SET_H_
-#define ENTITY_TABLE_SET_H_
+#ifndef _ENTITY_TABLE_SET_H_
+#define _ENTITY_TABLE_SET_H_
 
 #include "EntitySingleTablePropertyStructure.h"
 

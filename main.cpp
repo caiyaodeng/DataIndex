@@ -10,10 +10,18 @@
 #include "EntityMyDataType.h"
 #include "EntitySingleDataIndexEntry.h"
 #include "EntityDataIndexDataDocument.h"
-
+#include "EntityTypeValue.h"
 using namespace std;
 
+ template <typename T>
+ class CTest {
+ public:
+     string m_strName;
+     T m_tValue;
+ };
+
 int main(){
+
         NS_DataIndex::DataTypeStructure *objDataTypeStructure = new NS_DataIndex::DataTypeStructure();
         NS_DataIndex::DataTypeSet *objDataTypeSet = new NS_DataIndex::DataTypeSet();
         NS_DataIndex::DataIndexDataDocument *objDataIndexDataDocument= new NS_DataIndex::DataIndexDataDocument();
@@ -77,6 +85,7 @@ int main(){
         objTableSpace->setPartitionBlockNumber(17);
         q = objTableSpace->getPartitionBlockNumber();
 
+        cout << o << "  "<< p<< "   "<<q<<endl;
         objMyDataType->setTypeNameLength(18);
         r = objMyDataType->getTypeNameLength();
         objMyDataType->setTypeName((uint8_t *)"Ion2");
@@ -94,6 +103,20 @@ int main(){
         objSingleDataTypeInformation->setDataStructureLength(22);
         v = objSingleDataTypeInformation->getDataStructureLength();
         cout << s << "   "<<t<< "   "<<Dname2<<"  " <<u<<"   "<<v<<endl;
+
+        CTest <int>obj_1;
+        CTest <bool>obj_2;
+        CTest <string>obj_3;
+
+        NS_DataIndex::EntityTypeValue <int> *obj_4 = new NS_DataIndex::EntityTypeValue <int>();
+        obj_4->m_tValue = 7;
+
+        NS_DataIndex::EntityTypeValue <char *> *obj_5 = new NS_DataIndex::EntityTypeValue <char *>();
+        obj_5->m_tValue = "nihao,shijie";
+
+        cout << obj_4->m_tValue << endl;
+        cout << obj_5->m_tValue << endl;
+        cout << "ok" << endl;
         return 0;
 
 

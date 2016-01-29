@@ -1,5 +1,5 @@
-#ifndef ENTITYMYTABLEPROPERTY_H_
-#define ENTITYMYTABLEPROPERTY_H_
+#ifndef _ENTITY_MY_TABLE_PROPERTY_H_
+#define _ENTITY_MY_TABLE_PROPERTY_H_
 
 #include "EntityMyDataType.h"
 

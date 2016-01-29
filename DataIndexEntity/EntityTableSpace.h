@@ -1,5 +1,5 @@
-#ifndef ENTITY_TABLE_SPACE_H_
-#define ENTITY_TABLE_SPACE_H_
+#ifndef _ENTITY_TABLE_SPACE_H_
+#define _ENTITY_TABLE_SPACE_H_
 
 #include "EntityTableSet.h"
 
