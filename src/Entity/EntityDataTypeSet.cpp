@@ -18,8 +18,9 @@ namespace NS_DataIndex {
 
     bool DataTypeSet::setDataTypeNumber (const uint32_t iDataTypeNum) {
         m_iDataTypeNum = iDataTypeNum;
-        if (m_iDataTypeNum == 0)
+        if (m_iDataTypeNum == 0) {
             return false;
+        }
         return true;
     }
 

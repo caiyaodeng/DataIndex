@@ -3,9 +3,9 @@
 
 
 /*分区常量定义*/
-#define REAL_SINGLE_PARTITON_TOTAL_SIZE      21474820128//（使用单分区）实际分区有效总大小
-#define REAL_DATA_TOTAL_SIZE                 19329550336//实际数据区大小
-#define PARTITION_TABLE_MAP_FIELD_SIZE       1179713.25 //分区使用位图大小
+#define REAL_SINGLE_PARTITON_TOTAL_SIZE      21474820128    //（使用单分区）实际分区有效总大小
+#define REAL_DATA_TOTAL_SIZE                 19329550336    //实际数据区大小
+#define PARTITION_TABLE_MAP_FIELD_SIZE       1179713.25     //分区使用位图大小
 
 #include "../../Entity/EntityBlock.h"
 

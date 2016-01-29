@@ -3,11 +3,9 @@
 
 #include <fstream>
 #include <string.h>
-#include <iostream>
 #include "iostream"
 #include "../ConfigDefault.h"
 #include "../../Entity/EntityBlock.h"
-using namespace std;
 
 namespace NS_DataIndex {
 

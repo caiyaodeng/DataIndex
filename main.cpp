@@ -41,10 +41,10 @@ int main(){
         Dname1 = (uint8_t*)objDataTypeStructure->getDatabaseName();
         objDataTypeStructure->setInitBlockNumber(1);
         a = objDataTypeStructure->getInitBlockNumber();
-        objDataTypeStructure->setNewExtendBlockNumber(2);
-        b= objDataTypeStructure->getNewExtendBlockNumber();
-        objDataTypeStructure->setSingleExtendBlockNumber(3);
-        c = objDataTypeStructure->getSingleExtendBlockNumber();
+        objDataTypeStructure->setNewExpandBlockNumber(2);
+        b= objDataTypeStructure->getNewExpandBlockNumber();
+        objDataTypeStructure->setSingleExpandBlockNumber(3);
+        c = objDataTypeStructure->getSingleExpandBlockNumber();
         cout<< Dname1<<a << "  "<< b<< "  "<< c<<endl;
 
         objDataTypeSet->setDataTypeNumber(4);
@@ -57,8 +57,8 @@ int main(){
         f = objDataIndexDataDocument->getDataTypeNumber();
         objDataIndexDataDocument->setInitBlockNumber(7);
         g = objDataIndexDataDocument->getInitBlockNumber();
-        objDataIndexDataDocument->setNewExtendBlockNumber(8);
-        h = objDataIndexDataDocument->getNewExtendBlockNumber();
+        objDataIndexDataDocument->setNewExpandBlockNumber(8);
+        h = objDataIndexDataDocument->getNewExpandBlockNumber();
         cout<<e<<"  "<<f<<"  "<<g<<"  "<<h<<endl;
 
         objSingleDataIndexEntry->setDataPartitionBlockserialNumber(9);
@@ -67,8 +67,8 @@ int main(){
         j = objSingleDataIndexEntry->getIndexPartitionBlockserialNumber();
         objSingleDataIndexEntry->setInitBlockNumber(11);
         k = objSingleDataIndexEntry->getInitBlockNumber();
-        objSingleDataIndexEntry->setNewExtendBlockNumber(12);
-        l = objSingleDataIndexEntry->getNewExtendBlockNumber();
+        objSingleDataIndexEntry->setNewExpandBlockNumber(12);
+        l = objSingleDataIndexEntry->getNewExpandBlockNumber();
         cout << i <<"   "<<j << "  "<< k<< "  "<<l<<endl;
 
         objSingleTablePropertyStructure->setTablePropertyNumber(13);
@@ -81,12 +81,9 @@ int main(){
 
         objTableSpace->setInitBlockNumber(15);
         o = objTableSpace->getInitBlockNumber();
-        objTableSpace->setNewExtendBlockNumber(16);
-        p = objTableSpace->getNewExtendBlockNumber();
-        objTableSpace->setPartitionBlockNumber(17);
-        q = objTableSpace->getPartitionBlockNumber();
-
-        cout << o << "  "<< p<< "   "<<q<<endl;
+        objTableSpace->setNewExpandBlockNumber(16);
+        p = objTableSpace->getNewExpandBlockNumber();
+        cout << o << "   "<<p<<endl;
         objMyDataType->setTypeNameLength(18);
         r = objMyDataType->getTypeNameLength();
         objMyDataType->setTypeName((uint8_t *)"Ion2");
