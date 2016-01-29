@@ -1,15 +1,15 @@
-#include "EntityAllTableSet.h"
+#include "EntityTableSet.h"
 
 namespace NS_DataIndex {
 
-    AllTableSet::AllTableSet()
+    TableSet::TableSet()
         :
-        m_iTableTotalNumber(0),
+        m_iTableTotalNum(0),
         m_objSingleTablePropertyStructure(NULL) {
             m_objSingleTablePropertyStructure = new SingleTablePropertyStructure();
     }
 
-    AllTableSet::~AllTableSet() {
+    TableSet::~TableSet() {
         if (m_objSingleTablePropertyStructure != NULL) {
             delete m_objSingleTablePropertyStructure;
             m_objSingleTablePropertyStructure = NULL;
@@ -21,9 +21,9 @@ namespace NS_DataIndex {
      * 参数：表总数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool AllTableSet::setTableTotalNumber(const uint32_t iTableTotalNumber) {
-        m_iTableTotalNumber = iTableTotalNumber;
-        if (m_iTableTotalNumber != 0) {
+    bool TableSet::setTableTotalNumber(const uint32_t iTableTotalNum) {
+        m_iTableTotalNum = iTableTotalNum;
+        if (m_iTableTotalNum != 0) {
             return false;
         }
             return true;
@@ -33,8 +33,13 @@ namespace NS_DataIndex {
      * 说明：获取表总数
      * 返回值：表总数
      * 更新时间：2016/1/28*/
-    uint32_t AllTableSet::getTableTotalNumber() {
-        return m_iTableTotalNumber;
+    const
+    uint32_t TableSet::getTableTotalNumber() {
+        return m_iTableTotalNum;
     }
 }
+
+
+
+
 

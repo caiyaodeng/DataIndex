@@ -4,20 +4,20 @@ namespace NS_DataIndex {
 
     DataTypeStructure::DataTypeStructure()
         :
-            m_iDatabaseName(0),
-            m_iInitBlockNumber(0),
-            m_iSingleExpandBlockNumber(0),
-            m_iNewExpandBlockNumber(0),
-            m_objAllDataTypeSet(NULL) {
-                m_objAllDataTypeSet = new AllDataTypeSet();
-                m_iDatabaseName = (uint8_t *)malloc(20);
-                memset(m_iDatabaseName,0,20);
+            m_pDatabaseName(0),
+            m_iInitBlockNum(0),
+            m_iSingleExpandBlockNum(0),
+            m_iNewExpandBlockNum(0),
+            m_objDataTypeSet(NULL) {
+                m_objDataTypeSet = new DataTypeSet();
+                m_pDatabaseName = (uint8_t *)malloc(20);
+                memset(m_pDatabaseName,0,20);
     }
 
     DataTypeStructure::~DataTypeStructure() {
-        if (m_objAllDataTypeSet != NULL) {
-            delete m_objAllDataTypeSet;
-            m_objAllDataTypeSet = NULL;
+        if (m_objDataTypeSet != NULL) {
+            delete m_objDataTypeSet;
+            m_objDataTypeSet = NULL;
         }
     }
 
@@ -26,9 +26,9 @@ namespace NS_DataIndex {
      * 参数：数据库名称
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setDatabaseName(const uint8_t *iDatabaseName) {
-        memcpy(m_iDatabaseName,iDatabaseName,strlen((char *)iDatabaseName));
-        if (m_iDatabaseName == 0)
+    bool DataTypeStructure::setDatabaseName(const uint8_t *pDatabaseName) {
+        memcpy(m_pDatabaseName,pDatabaseName,strlen((char *)pDatabaseName));
+        if (m_pDatabaseName == 0)
             return false;
         return true;
     }
@@ -38,9 +38,9 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setInitBlockNumber(const uint32_t iInitBlockNumber) {
-        m_iInitBlockNumber = iInitBlockNumber;
-        if (m_iInitBlockNumber == 0){
+    bool DataTypeStructure::setInitBlockNumber(const uint32_t iInitBlockNum) {
+        m_iInitBlockNum = iInitBlockNum;
+        if (m_iInitBlockNum == 0){
             return false;
         }
         return true;
@@ -51,9 +51,9 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setSingleExpandBlockNumber(const uint32_t iSingleExpandBlockNumber) {
-        m_iSingleExpandBlockNumber = iSingleExpandBlockNumber;
-        if (m_iSingleExpandBlockNumber == 0){
+    bool DataTypeStructure::setSingleExpandBlockNumber(const uint32_t iSingleExpandBlockNum) {
+        m_iSingleExpandBlockNum = iSingleExpandBlockNum;
+        if (m_iSingleExpandBlockNum == 0){
             return false;
         }
         return true;
@@ -64,9 +64,9 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool DataTypeStructure::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber) {
-        m_iNewExpandBlockNumber = iNewExpandBlockNumber;
-        if (m_iNewExpandBlockNumber == 0){
+    bool DataTypeStructure::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNum) {
+        m_iNewExpandBlockNum = iNewExpandBlockNum;
+        if (m_iNewExpandBlockNum == 0){
             return false;
         }
         return true;
@@ -78,7 +78,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     const
     uint8_t *DataTypeStructure::getDatabaseName() {
-        return m_iDatabaseName;
+        return m_pDatabaseName;
     }
 
     /**
@@ -87,7 +87,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     const
     uint32_t DataTypeStructure::getInitBlockNumber() {
-        return m_iInitBlockNumber;
+        return m_iInitBlockNum;
     }
 
     /**
@@ -96,7 +96,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     const
     uint32_t DataTypeStructure::getSingleExpandBlockNumber() {
-        return m_iSingleExpandBlockNumber;
+        return m_iSingleExpandBlockNum;
     }
 
     /**
@@ -105,7 +105,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/27*/
     const
     uint32_t DataTypeStructure::getNewExpandBlockNumber() {
-        return m_iNewExpandBlockNumber;
+        return m_iNewExpandBlockNum;
     }
 
 

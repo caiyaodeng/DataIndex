@@ -4,17 +4,17 @@ namespace NS_DataIndex {
 
     TableSpace::TableSpace()
         :
-        m_iInitBlockNumber(0),
-        m_iNewExpandBlockNumber(0),
-        m_iPartitionBlockNumber(0),
-        m_objAllTableSet(NULL) {
-            m_objAllTableSet = new AllTableSet();
+        m_iInitBlockNum(0),
+        m_iNewExpandBlockNum(0),
+        m_iPartitionBlockNum(0),
+        m_objTableSet(NULL) {
+            m_objTableSet = new TableSet();
     }
 
     TableSpace::~TableSpace() {
-        if (m_objAllTableSet != NULL)
-            delete m_objAllTableSet;
-            m_objAllTableSet = NULL;
+        if (m_objTableSet != NULL)
+            delete m_objTableSet;
+            m_objTableSet = NULL;
     }
 
     /**
@@ -22,9 +22,9 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setInitBlockNumber(const uint32_t iInitBlockNumber) {
-        m_iInitBlockNumber = iInitBlockNumber;
-        if (m_iInitBlockNumber == 0) {
+    bool TableSpace::setInitBlockNumber(const uint32_t iInitBlockNum) {
+        m_iInitBlockNum = iInitBlockNum;
+        if (m_iInitBlockNum == 0) {
             return false;
         }
         return true;
@@ -35,9 +35,9 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber) {
-        m_iNewExpandBlockNumber = iNewExpandBlockNumber;
-        if (m_iNewExpandBlockNumber == 0) {
+    bool TableSpace::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNum) {
+        m_iNewExpandBlockNum = iNewExpandBlockNum;
+        if (m_iNewExpandBlockNum == 0) {
             return false;
         }
         return true;
@@ -48,9 +48,9 @@ namespace NS_DataIndex {
      * 参数：表空间分区块编号
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setPartitionBlockNumber(const uint32_t iPartitionBlockNumber) {
-        m_iPartitionBlockNumber = iPartitionBlockNumber;
-        if (m_iPartitionBlockNumber == 0) {
+    bool TableSpace::setPartitionBlockNumber(const uint32_t iPartitionBlockNum) {
+        m_iPartitionBlockNum = iPartitionBlockNum;
+        if (m_iPartitionBlockNum == 0) {
             return false;
         }
         return true;
@@ -62,7 +62,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     const
     uint32_t TableSpace::getInitBlockNumber() {
-        return m_iInitBlockNumber;
+        return m_iInitBlockNum;
     }
 
     /**
@@ -71,7 +71,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     const
     uint32_t TableSpace::getNewExpandBlockNumber() {
-        return m_iNewExpandBlockNumber;
+        return m_iNewExpandBlockNum;
     }
 
     /**
@@ -80,7 +80,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     const
     uint32_t TableSpace::getPartitionBlockNumber() {
-        return m_iPartitionBlockNumber;
+        return m_iPartitionBlockNum;
     }
 }
 

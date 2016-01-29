@@ -1,7 +1,7 @@
 #ifndef ENTITY_TABLE_SPACE_H_
 #define ENTITY_TABLE_SPACE_H_
 
-#include "EntityAllTableSet.h"
+#include "EntityTableSet.h"
 
 namespace NS_DataIndex {
 
@@ -11,10 +11,10 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     class TableSpace{
 
-        uint32_t m_iInitBlockNumber;            //初始块数量
-        uint32_t m_iNewExpandBlockNumber;       //新扩充块数
-        uint32_t m_iPartitionBlockNumber;       //表空间分区块编号
-        AllTableSet *m_objAllTableSet;          //所有表集合
+        uint32_t m_iInitBlockNum;           //初始块数量
+        uint32_t m_iNewExpandBlockNum;      //新扩充块数
+        uint32_t m_iPartitionBlockNum;      //表空间分区块编号
+        TableSet *m_objTableSet;            //所有表集合
 
     public:
         explicit
@@ -27,21 +27,21 @@ namespace NS_DataIndex {
          * 参数：初始块数量
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setInitBlockNumber(const uint32_t iInitBlockNumber);
+        bool setInitBlockNumber(const uint32_t iInitBlockNum);
 
         /**
          * 说明：设置新扩充块数
          * 参数：新扩充块数
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setNewExpandBlockNumber(const uint32_t iNewExpandBlockNumber);
+        bool setNewExpandBlockNumber(const uint32_t iNewExpandBlockNum);
 
         /**
          * 说明：设置表空间分区块编号
          * 参数：表空间分区块编号
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setPartitionBlockNumber(const uint32_t iPartitionBlockNumber);
+        bool setPartitionBlockNumber(const uint32_t iPartitionBlockNum);
 
         /**
          * 说明：获取初始块数量

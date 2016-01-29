@@ -4,10 +4,10 @@ namespace NS_DataIndex {
 
     MyDataType::MyDataType()
         :
-            m_iTypeName(0),
+            m_pTypeName(0),
             m_iTypeNameLength(0) {
-                m_iTypeName = (uint8_t *)malloc(20);
-                memset(m_iTypeName,0,20);
+                m_pTypeName = (uint8_t *)malloc(20);
+                memset(m_pTypeName,0,20);
     }
     MyDataType::~MyDataType(){
 
@@ -18,9 +18,9 @@ namespace NS_DataIndex {
      * 参数：类型名称
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool MyDataType::setTypeName(const uint8_t *iTypeName) {
-        memcpy(m_iTypeName,iTypeName,strlen((char *)iTypeName));
-        if (m_iTypeName == 0) {
+    bool MyDataType::setTypeName(const uint8_t *pTypeName) {
+        memcpy(m_pTypeName,pTypeName,strlen((char *)pTypeName));
+        if (m_pTypeName == 0) {
             return false;
         }
         return true;
@@ -45,7 +45,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     const
     uint8_t *MyDataType::getTypeName() {
-        return m_iTypeName;
+        return m_pTypeName;
     }
 
     /**

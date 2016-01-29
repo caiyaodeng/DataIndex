@@ -5,7 +5,7 @@ namespace NS_DataIndex {
     SingleTablePropertyStructure::SingleTablePropertyStructure()
             :
                 objMyTablePropertyHead(NULL),
-                m_iTablePropertyNumber(0) {
+                m_iTablePropertyNum(0) {
         objMyTablePropertyHead = new MyTableProperty();
     }
 
@@ -21,9 +21,9 @@ namespace NS_DataIndex {
      * 参数：表属性数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleTablePropertyStructure::setTablePropertyNumber(const uint32_t iTablePropertyNumber) {
-        m_iTablePropertyNumber = iTablePropertyNumber;
-        if (m_iTablePropertyNumber == 0) {
+    bool SingleTablePropertyStructure::setTablePropertyNumber(const uint32_t iTablePropertyNum) {
+        m_iTablePropertyNum = iTablePropertyNum;
+        if (m_iTablePropertyNum == 0) {
             return false;
         }
         return true;
@@ -35,7 +35,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     const
     uint32_t SingleTablePropertyStructure::getTablePropertyNumber() {
-        return m_iTablePropertyNumber;
+        return m_iTablePropertyNum;
     }
 
 }

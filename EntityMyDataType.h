@@ -12,7 +12,7 @@ namespace NS_DataIndex {
      * 创建人：林宇斌
      * 更新时间：2016/1/28*/
     class MyDataType {
-        uint8_t *m_iTypeName;       //类型名称
+        uint8_t *m_pTypeName;       //类型名称
         uint32_t m_iTypeNameLength; //类型名称长度
 
         /***********************待合并******************************/
@@ -31,7 +31,7 @@ namespace NS_DataIndex {
          * 参数：类型名称
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setTypeName(const uint8_t *iTypeName);
+        bool setTypeName(const uint8_t *pTypeName);
 
         /**
          * 说明：设置类型名称长度
