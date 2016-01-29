@@ -22,8 +22,8 @@ namespace NS_DataIndex {
 
     public:
         explicit
-        MyDataType();
-        ~MyDataType();
+        MyDataType ();
+        ~MyDataType ();
 
     public:
         /**
@@ -31,28 +31,28 @@ namespace NS_DataIndex {
          * 参数：类型名称
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setTypeName(const uint8_t *pTypeName);
+        bool setTypeName (const uint8_t *pTypeName);
 
         /**
          * 说明：设置类型名称长度
          * 参数：类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setTypeNameLength(const uint32_t iTypeNameLength);
+        bool setTypeNameLength (const uint32_t iTypeNameLength);
 
         /**
          * 说明：获取类型名称
          * 返回值：类型名称
          * 更新时间：2016/1/28*/
         const
-        uint8_t *getTypeName();
+        uint8_t *getTypeName ();
 
         /**
          * 说明：获取类型名称长度
          * 返回值：类型名称长度
          * 更新时间：2016/1/28*/
         const
-        uint32_t getTypeNameLength();
+        uint32_t getTypeNameLength ();
     };
 
 }

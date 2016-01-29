@@ -1,24 +1,24 @@
 #include <iostream>
 #include <stdint.h>
-#include "EntityDataTypeStructure.h"
-#include "EntityDataTypeSet.h"
-#include "EntitySingleDataTypeInformation.h"
-#include "EntityTableSpace.h"
-#include "EntityTableSet.h"
-#include "EntitySingleTablePropertyStructure.h"
-#include "EntityMyTableProperty.h"
-#include "EntityMyDataType.h"
-#include "EntitySingleDataIndexEntry.h"
-#include "EntityDataIndexDataDocument.h"
-#include "EntityTypeValue.h"
+#include "src/Entity/EntityDataTypeStructure.h"
+#include "src/Entity/EntityDataTypeSet.h"
+#include "src/Entity/EntitySingleDataTypeInformation.h"
+#include "src/Entity/EntityTableSpace.h"
+#include "src/Entity/EntityTableSet.h"
+#include "src/Entity/EntitySingleTablePropertyStructure.h"
+#include "src/Entity/EntityMyTableProperty.h"
+#include "src/Entity/EntityMyDataType.h"
+#include "src/Entity/EntitySingleDataIndexEntry.h"
+#include "src/Entity/EntityDataIndexDataDocument.h"
+#include "src/Entity/EntityTypeValue.h"
 using namespace std;
 
- template <typename T>
- class CTest {
- public:
-     string m_strName;
-     T m_tValue;
- };
+template <typename T>
+class CTest {
+public:
+    string m_strName;
+    T m_tValue;
+};
 
 int main(){
 
@@ -40,10 +40,10 @@ int main(){
         Dname1 = (uint8_t*)objDataTypeStructure->getDatabaseName();
         objDataTypeStructure->setInitBlockNumber(1);
         a = objDataTypeStructure->getInitBlockNumber();
-        objDataTypeStructure->setNewExpandBlockNumber(2);
-        b= objDataTypeStructure->getNewExpandBlockNumber();
-        objDataTypeStructure->setSingleExpandBlockNumber(3);
-        c = objDataTypeStructure->getSingleExpandBlockNumber();
+        objDataTypeStructure->setNewExtendBlockNumber(2);
+        b= objDataTypeStructure->getNewExtendBlockNumber();
+        objDataTypeStructure->setSingleExtendBlockNumber(3);
+        c = objDataTypeStructure->getSingleExtendBlockNumber();
         cout<< Dname1<<a << "  "<< b<< "  "<< c<<endl;
 
         objDataTypeSet->setDataTypeNumber(4);
@@ -56,8 +56,8 @@ int main(){
         f = objDataIndexDataDocument->getDataTypeNumber();
         objDataIndexDataDocument->setInitBlockNumber(7);
         g = objDataIndexDataDocument->getInitBlockNumber();
-        objDataIndexDataDocument->setNewExpandBlockNumber(8);
-        h = objDataIndexDataDocument->getNewExpandBlockNumber();
+        objDataIndexDataDocument->setNewExtendBlockNumber(8);
+        h = objDataIndexDataDocument->getNewExtendBlockNumber();
         cout<<e<<"  "<<f<<"  "<<g<<"  "<<h<<endl;
 
         objSingleDataIndexEntry->setDataPartitionBlockserialNumber(9);
@@ -66,8 +66,8 @@ int main(){
         j = objSingleDataIndexEntry->getIndexPartitionBlockserialNumber();
         objSingleDataIndexEntry->setInitBlockNumber(11);
         k = objSingleDataIndexEntry->getInitBlockNumber();
-        objSingleDataIndexEntry->setNewExpandBlockNumber(12);
-        l = objSingleDataIndexEntry->getNewExpandBlockNumber();
+        objSingleDataIndexEntry->setNewExtendBlockNumber(12);
+        l = objSingleDataIndexEntry->getNewExtendBlockNumber();
         cout << i <<"   "<<j << "  "<< k<< "  "<<l<<endl;
 
         objSingleTablePropertyStructure->setTablePropertyNumber(13);
@@ -80,8 +80,8 @@ int main(){
 
         objTableSpace->setInitBlockNumber(15);
         o = objTableSpace->getInitBlockNumber();
-        objTableSpace->setNewExpandBlockNumber(16);
-        p = objTableSpace->getNewExpandBlockNumber();
+        objTableSpace->setNewExtendBlockNumber(16);
+        p = objTableSpace->getNewExtendBlockNumber();
         objTableSpace->setPartitionBlockNumber(17);
         q = objTableSpace->getPartitionBlockNumber();
 

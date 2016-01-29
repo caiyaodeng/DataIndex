@@ -11,13 +11,13 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     class DataTypeSet {
 
-        uint32_t m_iDataTypeNum;                         //数据类型数量
+        uint32_t m_iDataTypeNum;                                        //数据类型数量
         SingleDataTypeInformation *m_objSingleDataTypeInformation;      //单数据类型结构信息对象
 
     public:
         explicit
-        DataTypeSet();
-        ~DataTypeSet();
+        DataTypeSet ();
+        ~DataTypeSet ();
 
     public:
         /**
@@ -25,14 +25,14 @@ namespace NS_DataIndex {
          * 参数：数据类型数量
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setDataTypeNumber(const uint32_t iDataTypeNum);
+        bool setDataTypeNumber (const uint32_t iDataTypeNum);
 
         /*
          * 说明：获取数据类型长度
          * 返回值数据类型长度
          * 更新时间：2016/1/28*/
         const
-        uint32_t getDataTypeNumber();
+        uint32_t getDataTypeNumber ();
     };
 
 }

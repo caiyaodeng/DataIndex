@@ -2,14 +2,14 @@
 
 namespace NS_DataIndex {
 
-    TableSet::TableSet()
+    TableSet::TableSet ()
         :
-        m_iTableTotalNum(0),
-        m_objSingleTablePropertyStructure(NULL) {
-            m_objSingleTablePropertyStructure = new SingleTablePropertyStructure();
+        m_iTableTotalNum (0),
+        m_objSingleTablePropertyStructure (NULL) {
+            m_objSingleTablePropertyStructure = new SingleTablePropertyStructure ();
     }
 
-    TableSet::~TableSet() {
+    TableSet::~TableSet () {
         if (m_objSingleTablePropertyStructure != NULL) {
             delete m_objSingleTablePropertyStructure;
             m_objSingleTablePropertyStructure = NULL;
@@ -21,7 +21,7 @@ namespace NS_DataIndex {
      * 参数：表总数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSet::setTableTotalNumber(const uint32_t iTableTotalNum) {
+    bool TableSet::setTableTotalNumber (const uint32_t iTableTotalNum) {
         m_iTableTotalNum = iTableTotalNum;
         if (m_iTableTotalNum != 0) {
             return false;
@@ -34,7 +34,7 @@ namespace NS_DataIndex {
      * 返回值：表总数
      * 更新时间：2016/1/28*/
     const
-    uint32_t TableSet::getTableTotalNumber() {
+    uint32_t TableSet::getTableTotalNumber () {
         return m_iTableTotalNum;
     }
 }
