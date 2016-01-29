@@ -20,8 +20,8 @@ namespace NS_DataIndex {
 
     public:
         explicit
-        SingleDataTypeInformation();
-        ~SingleDataTypeInformation();
+        SingleDataTypeInformation ();
+        ~SingleDataTypeInformation ();
 
     public:
         /**
@@ -29,70 +29,70 @@ namespace NS_DataIndex {
          * 参数：数据类型结构长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataStructureLength(const uint32_t iDataStructureLength);
+        bool setDataStructureLength (const uint32_t iDataStructureLength);
 
         /**
          * 说明：设置数据类型名称长度
          * 参数：数据类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataNameLength(const uint32_t iDataNameLength);
+        bool setDataNameLength (const uint32_t iDataNameLength);
 
         /**
          * 说明：设置数据类型名称
          * 参数：数据类型名称
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataName(const uint8_t * pDataName);
+        bool setDataName (const uint8_t * pDataName);
 
         /**
          * 说明：设置对应块号
          * 参数：对应块号
          * 返回值：是否设置成功
          * 更新时间:2016/1/27*/
-        bool setBlockserialNumber(const uint32_t m_iBlockserialNum);
+        bool setBlockserialNumber (const uint32_t m_iBlockserialNum);
 
         /**
          * 说明：设置引导块号
          * 参数：引导块号
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setBootBlockNumber(const uint32_t m_iBootBlockNum);
+        bool setBootBlockNumber (const uint32_t m_iBootBlockNum);
 
         /**
          * 说明：获取数据类型结构长度
          * 返回值：数据类型结构长度
          * 更新时间：2016/1/27*/
         const
-        uint32_t getDataStructureLength();
+        uint32_t getDataStructureLength ();
 
         /**
          * 说明：获取数据类型名称长度
          * 返回值：数据类型名称长度
          * 更新时间：2016/1/27*/
         const
-        uint32_t getDataNameLength();
+        uint32_t getDataNameLength ();
 
         /**
          * 说明：获取数据类型名称
          * 返回值：数据类型名称
          * 更新时间：2016/1/27*/
         const
-        uint8_t *getDataName();
+        uint8_t *getDataName ();
 
         /**
          * 说明：获取对应块号
          * 返回值：对应块号
          * 更新时间：2016/1/27*/
         const
-        uint32_t getBlockserialNumber();
+        uint32_t getBlockserialNumber ();
 
         /**
          * 说明：获取引导块号
          * 返回值：引导块号
          * 更新时间：2016/1/28*/
         const
-        uint32_t getBootBlockNumber();
+        uint32_t getBootBlockNumber ();
     };
 
 }

@@ -2,16 +2,16 @@
 
 namespace NS_DataIndex {
 
-    SingleDataIndexEntry::SingleDataIndexEntry()
+    SingleDataIndexEntry::SingleDataIndexEntry ()
         :
-        m_iInitBlockNum(0),
-        m_iNewExpandBlockNum(0),
-        m_iDataPartitionBlockserialNum(0),
-        m_iIndexPartitionBlockserialNum(0) {
+        m_iInitBlockNum (0),
+        m_iNewExpandBlockNum (0),
+        m_iDataPartitionBlockserialNum (0),
+        m_iIndexPartitionBlockserialNum (0) {
 
     }
 
-    SingleDataIndexEntry::~SingleDataIndexEntry() {
+    SingleDataIndexEntry::~SingleDataIndexEntry () {
 
     }
 
@@ -20,7 +20,7 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleDataIndexEntry::setInitBlockNumber(const uint32_t iInitBlockNum) {
+    bool SingleDataIndexEntry::setInitBlockNumber (const uint32_t iInitBlockNum) {
         m_iInitBlockNum = iInitBlockNum;
         if (m_iInitBlockNum == 0) {
             return false;
@@ -33,7 +33,7 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleDataIndexEntry::setNewExpandBlockNumber(const uint32_t iNewExpandBlockNum) {
+    bool SingleDataIndexEntry::setNewExpandBlockNumber (const uint32_t iNewExpandBlockNum) {
         m_iNewExpandBlockNum = iNewExpandBlockNum;
         if (m_iNewExpandBlockNum == 0) {
             return false;
@@ -46,7 +46,7 @@ namespace NS_DataIndex {
      * 参数：数据分区块编号
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleDataIndexEntry::setDataPartitionBlockserialNumber(const uint32_t iDataPartitionBlockNum) {
+    bool SingleDataIndexEntry::setDataPartitionBlockserialNumber (const uint32_t iDataPartitionBlockNum) {
         m_iDataPartitionBlockserialNum = iDataPartitionBlockNum;
         if (m_iDataPartitionBlockserialNum == 0) {
             return false;
@@ -59,7 +59,7 @@ namespace NS_DataIndex {
      * 参数：索引分区块编号
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleDataIndexEntry::setIndexPartitionBlockserialNumber(const uint32_t iIndexPartitionBlockNum) {
+    bool SingleDataIndexEntry::setIndexPartitionBlockserialNumber (const uint32_t iIndexPartitionBlockNum) {
         m_iIndexPartitionBlockserialNum = iIndexPartitionBlockNum;
         if (m_iIndexPartitionBlockserialNum == 0) {
             return false;
@@ -72,7 +72,7 @@ namespace NS_DataIndex {
      * 返回值：初始块数量
      * 更新时间：2016/1/28*/
     const
-    uint32_t SingleDataIndexEntry::getInitBlockNumber() {
+    uint32_t SingleDataIndexEntry::getInitBlockNumber () {
         return m_iInitBlockNum;
     }
 
@@ -81,7 +81,7 @@ namespace NS_DataIndex {
      * 返回值：新扩充块数
      * 更新时间：2016/1/28*/
     const
-    uint32_t SingleDataIndexEntry::getNewExpandBlockNumber() {
+    uint32_t SingleDataIndexEntry::getNewExpandBlockNumber () {
         return m_iNewExpandBlockNum;
     }
 
@@ -90,7 +90,7 @@ namespace NS_DataIndex {
      * 返回值：数据分区块编号
      * 更新时间：2016/1/28*/
     const
-    uint32_t SingleDataIndexEntry::getDataPartitionBlockserialNumber() {
+    uint32_t SingleDataIndexEntry::getDataPartitionBlockserialNumber () {
         return m_iDataPartitionBlockserialNum;
     }
 
@@ -99,7 +99,7 @@ namespace NS_DataIndex {
      * 返回值：索引分区块编号
      * 更新时间：2016/1/28*/
     const
-    uint32_t SingleDataIndexEntry::getIndexPartitionBlockserialNumber() {
+    uint32_t SingleDataIndexEntry::getIndexPartitionBlockserialNumber () {
         return m_iIndexPartitionBlockserialNum;
     }
 }

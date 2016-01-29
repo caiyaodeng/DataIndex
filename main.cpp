@@ -1,24 +1,24 @@
 #include <iostream>
 #include <stdint.h>
-#include "EntityDataTypeStructure.h"
-#include "EntityDataTypeSet.h"
-#include "EntitySingleDataTypeInformation.h"
-#include "EntityTableSpace.h"
-#include "EntityTableSet.h"
-#include "EntitySingleTablePropertyStructure.h"
-#include "EntityMyTableProperty.h"
-#include "EntityMyDataType.h"
-#include "EntitySingleDataIndexEntry.h"
-#include "EntityDataIndexDataDocument.h"
-#include "EntityTypeValue.h"
+#include "src/Entity/EntityDataTypeStructure.h"
+#include "src/Entity/EntityDataTypeSet.h"
+#include "src/Entity/EntitySingleDataTypeInformation.h"
+#include "src/Entity/EntityTableSpace.h"
+#include "src/Entity/EntityTableSet.h"
+#include "src/Entity/EntitySingleTablePropertyStructure.h"
+#include "src/Entity/EntityMyTableProperty.h"
+#include "src/Entity/EntityMyDataType.h"
+#include "src/Entity/EntitySingleDataIndexEntry.h"
+#include "src/Entity/EntityDataIndexDataDocument.h"
+#include "src/Entity/EntityTypeValue.h"
 using namespace std;
 
- template <typename T>
- class CTest {
- public:
-     string m_strName;
-     T m_tValue;
- };
+template <typename T>
+class CTest {
+public:
+    string m_strName;
+    T m_tValue;
+};
 
 int main(){
 
@@ -82,10 +82,7 @@ int main(){
         o = objTableSpace->getInitBlockNumber();
         objTableSpace->setNewExpandBlockNumber(16);
         p = objTableSpace->getNewExpandBlockNumber();
-        objTableSpace->setPartitionBlockNumber(17);
-        q = objTableSpace->getPartitionBlockNumber();
-
-        cout << o << "  "<< p<< "   "<<q<<endl;
+        cout << o << "   "<<p<<endl;
         objMyDataType->setTypeNameLength(18);
         r = objMyDataType->getTypeNameLength();
         objMyDataType->setTypeName((uint8_t *)"Ion2");
