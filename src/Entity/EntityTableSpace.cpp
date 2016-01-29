@@ -5,7 +5,7 @@ namespace NS_DataIndex {
     TableSpace::TableSpace ()
         :
         m_iInitBlockNum (0),
-        m_iNewExtendBlockNum (0),
+        m_iNewExpandBlockNum (0),
         m_objTableSet (NULL) {
             m_objTableSet = new TableSet ();
     }
@@ -35,9 +35,9 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setNewExtendBlockNumber (const uint32_t iNewExtendBlockNum) {
-        m_iNewExtendBlockNum = iNewExtendBlockNum;
-        if (m_iNewExtendBlockNum == 0) {
+    bool TableSpace::setNewExpandBlockNumber (const uint32_t iNewExpandBlockNum) {
+        m_iNewExpandBlockNum = iNewExpandBlockNum;
+        if (m_iNewExpandBlockNum == 0) {
             return false;
         }
         return true;
@@ -66,8 +66,8 @@ namespace NS_DataIndex {
      * 返回值：新扩充块数
      * 更新时间：2016/1/28*/
     const
-    uint32_t TableSpace::getNewExtendBlockNumber () {
-        return m_iNewExtendBlockNum;
+    uint32_t TableSpace::getNewExpandBlockNumber () {
+        return m_iNewExpandBlockNum;
     }
 
     /**

@@ -12,7 +12,7 @@ namespace NS_DataIndex {
     class TableSpace {
 
         uint32_t m_iInitBlockNum;           //初始块数量
-        uint32_t m_iNewExtendBlockNum;      //新扩充块数
+        uint32_t m_iNewExpandBlockNum;      //新扩充块数
         //TODO://B+树索引管理
         TableSet *m_objTableSet;            //所有表集合
 
@@ -34,7 +34,7 @@ namespace NS_DataIndex {
          * 参数：新扩充块数
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setNewExtendBlockNumber (const uint32_t iNewExtendBlockNum);
+        bool setNewExpandBlockNumber (const uint32_t iNewExpandBlockNum);
 
         /**
          * 说明：设置表空间分区块编号
@@ -55,7 +55,7 @@ namespace NS_DataIndex {
          * 返回值：新扩充块数
          * 更新时间：2016/1/28*/
         const
-        uint32_t getNewExtendBlockNumber ();
+        uint32_t getNewExpandBlockNumber ();
 
         /**
          * 说明：获取表空间分区块编号
