@@ -10,13 +10,14 @@
 
 namespace NS_DataIndex {
 
-/**
- * 说明：自定义类型的值*/
- template <typename T>
- class EntityTypeValue {
- public:
-     T m_tValue;
- };
+	/**
+	 * 说明：自定义类型的值*/
+	 template <typename T>
+	 class EntityTypeValue {
+	 
+	 public:
+	     T m_tValue;
+	 };
 
 }
 
