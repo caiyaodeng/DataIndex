@@ -1,4 +1,4 @@
-#include "EntityTableSpace.h"
+#include "../../include/Entity/EntityTableSpace.h"
 
 namespace NS_DataIndex {
 

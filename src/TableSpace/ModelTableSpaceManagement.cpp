@@ -1,4 +1,4 @@
-#include "ModelTableSpaceManagement.h"
+#include "../../include/TableSpace/ModelTableSpaceManagement.h"
 
 namespace NS_DataIndex {
 
