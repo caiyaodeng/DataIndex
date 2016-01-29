@@ -1,4 +1,4 @@
-#include "EntitySingleTablePropertyStructure.h"
+#include "../../include/Entity/EntitySingleTablePropertyStructure.h"
 
 namespace NS_DataIndex {
 

@@ -1,16 +1,16 @@
 #include <iostream>
 #include <stdint.h>
-#include "src/Entity/EntityDataTypeStructure.h"
-#include "src/Entity/EntityDataTypeSet.h"
-#include "src/Entity/EntitySingleDataTypeInformation.h"
-#include "src/Entity/EntityTableSpace.h"
-#include "src/Entity/EntityTableSet.h"
-#include "src/Entity/EntitySingleTablePropertyStructure.h"
-#include "src/Entity/EntityMyTableProperty.h"
-#include "src/Entity/EntityMyDataType.h"
-#include "src/Entity/EntitySingleDataIndexEntry.h"
-#include "src/Entity/EntityDataIndexDataDocument.h"
-#include "src/Entity/EntityTypeValue.h"
+#include "include/Entity/EntityDataTypeStructure.h"
+#include "include/Entity/EntityDataTypeSet.h"
+#include "include/Entity/EntitySingleDataTypeInformation.h"
+#include "include/Entity/EntityTableSpace.h"
+#include "include/Entity/EntityTableSet.h"
+#include "include/Entity/EntitySingleTablePropertyStructure.h"
+#include "include/Entity/EntityMyTableProperty.h"
+#include "include/Entity/EntityMyDataType.h"
+#include "include/Entity/EntitySingleDataIndexEntry.h"
+#include "include/Entity/EntityDataIndexDataDocument.h"
+#include "include/Entity/EntityTypeValue.h"
 using namespace std;
 
 template <typename T>
