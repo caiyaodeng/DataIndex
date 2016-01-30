@@ -1,4 +1,4 @@
-#include "EntityMyTableProperty.h"
+#include "../../include/Entity/EntityMyTableProperty.h"
 
 namespace NS_DataIndex {
 

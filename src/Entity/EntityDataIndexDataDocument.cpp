@@ -1,4 +1,4 @@
-#include "EntityDataIndexDataDocument.h"
+#include "../../include/Entity/EntityDataIndexDataDocument.h"
 
 namespace NS_DataIndex {
     DataIndexDataDocument::DataIndexDataDocument ()
