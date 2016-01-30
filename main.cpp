@@ -108,6 +108,4 @@ int main(){
         cout << obj_5->m_tValue << endl;
         cout << "ok" << endl;
         return 0;
-
-
 }

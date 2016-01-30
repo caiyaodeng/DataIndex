@@ -57,6 +57,12 @@ namespace NS_DataIndex {
          * 返回值：是否找到
          * 更新时间：2016/1/30*/
         bool quaryDataType (const uint8_t *pDataTypeNameIn);
+
+        /**
+         * 说明：扩充一次引导区
+         * 返回值：是否扩充成功
+         * 更新时间：2016/1/30*/
+        bool expandTableSpace ();
     };
 }
 
