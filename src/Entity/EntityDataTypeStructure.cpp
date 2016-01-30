@@ -1,4 +1,4 @@
-#include "EntityDataTypeStructure.h"
+#include "../../include/Entity/EntityDataTypeStructure.h"
 
 namespace NS_DataIndex {
 

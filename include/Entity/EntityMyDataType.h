@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdint.h>
 
+//using namespace std;
+
 namespace NS_DataIndex {
 
     /**
@@ -12,13 +14,11 @@ namespace NS_DataIndex {
      * 创建人：林宇斌
      * 更新时间：2016/1/28*/
     class MyDataType {
+
         uint8_t *m_pTypeName;       //类型名称
         uint32_t m_iTypeNameLength; //类型名称长度
-
-        /***********************待合并******************************/
-        //uint8_t *m_iType;           //表示类型
-        //uint32_t m_iTypelength;     //表示类型长度
-        /********************************************************/
+        uint8_t *m_pType;           //表示类型
+        uint32_t m_iTypeLength;     //表示类型长度
 
     public:
         explicit
@@ -41,6 +41,20 @@ namespace NS_DataIndex {
         bool setTypeNameLength (const uint32_t iTypeNameLength);
 
         /**
+         * 说明：设置表示类型
+         * 参数：表示类型
+         * 返回值：是否设置成功
+         * 更新时间：2016/1/29*/
+        bool setType (const uint8_t *pType);
+
+        /**
+         * 说明：设置表示类型长度
+         * 参数：表示类型长度
+         * 返回值：是否设置成功
+         * 更新时间：2016/1/29*/
+        bool setTypelength (const uint32_t iTypeLength);
+
+        /**
          * 说明：获取类型名称
          * 返回值：类型名称
          * 更新时间：2016/1/28*/
@@ -53,6 +67,20 @@ namespace NS_DataIndex {
          * 更新时间：2016/1/28*/
         const
         uint32_t getTypeNameLength ();
+
+        /**
+         * 说明：获取
+         * 返回值：表示类型
+         * 更新时间：2016/1/29*/
+        const
+        uint8_t *getType ();
+
+        /**
+         * 说明：获取
+         * 返回值：表示类型长度
+         * 更新时间：2016/1/29*/
+        const
+        uint32_t getTypeLength ();
     };
 
 }

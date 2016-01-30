@@ -12,7 +12,7 @@
 #include <string.h>
 #include <stdint.h>
 #include "../Kernel/ConfigDefault.h"
-
+//using namespace std;
 namespace NS_DataIndex {
 
     /**
