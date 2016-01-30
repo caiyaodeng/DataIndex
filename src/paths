@@ -1,0 +1,7 @@
+
+#libentity
+#export LIBMODULEA_PREFIX=../modulea
+export LIBMODULEA_INCL=../include/Entity
+export LIBMODULEA_CFLAGS=-I$(LIBMODULEA_INCL)
+export LIBMODULEA_LDPATH=../lib
+export LIBMODULEA_LDFLAGS=-L$(LIBMODULEA_LDPATH) -lentity
