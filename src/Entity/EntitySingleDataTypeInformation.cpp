@@ -22,7 +22,7 @@ namespace NS_DataIndex {
      * 参数：数据类型结构长度
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool SingleDataTypeInformation::setDataStructureLength (const uint32_t iDataStructureLength) {
+    bool SingleDataTypeInformation::setDataStructureLength (uint32_t iDataStructureLength) {
         m_iDataStructureLength = iDataStructureLength;
         if (m_iDataStructureLength == 0) {
             return false;
@@ -35,7 +35,7 @@ namespace NS_DataIndex {
      * 参数：数据类型名称长度
      * 返回值：是否设置成功
      * 更新时间：2016/1/27*/
-    bool SingleDataTypeInformation::setDataNameLength (const uint32_t iDataNameLength) {
+    bool SingleDataTypeInformation::setDataNameLength (uint32_t iDataNameLength) {
         m_iDataNameLength = iDataNameLength;
         if (m_iDataNameLength == 0) {
             return false;
@@ -61,7 +61,7 @@ namespace NS_DataIndex {
      * 参数：对应块号
      * 返回值：是否设置成功
      * 更新时间:2016/1/27*/
-    bool SingleDataTypeInformation::setBlockserialNumber (const uint32_t iBlockNum) {
+    bool SingleDataTypeInformation::setBlockserialNumber (uint32_t iBlockNum) {
         m_iBlockserialNum = iBlockNum;
         if (m_iBlockserialNum == 0) {
             return false;
@@ -74,7 +74,7 @@ namespace NS_DataIndex {
      * 参数：引导块号
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool SingleDataTypeInformation::setBootBlockNumber (const uint32_t iBootBlockNum) {
+    bool SingleDataTypeInformation::setBootBlockNumber (uint32_t iBootBlockNum) {
         m_iBootBlockNum = iBootBlockNum;
         if (m_iBootBlockNum == 0) {
             return false;
@@ -86,7 +86,6 @@ namespace NS_DataIndex {
      * 说明：获取数据类型结构长度
      * 返回值：数据类型结构长度
      * 更新时间：2016/1/27*/
-    const
     uint32_t SingleDataTypeInformation::getDataStructureLength () {
         return m_iDataStructureLength;
     }
@@ -95,7 +94,6 @@ namespace NS_DataIndex {
      * 说明：获取数据类型名称长度
      * 返回值：数据类型名称长度
      * 更新时间：2016/1/27*/
-    const
     uint32_t SingleDataTypeInformation::getDataNameLength () {
         return m_iDataNameLength;
     }
@@ -113,7 +111,6 @@ namespace NS_DataIndex {
      * 说明：获取对应块号
      * 返回值：对应块号
      * 更新时间：2016/1/27*/
-    const
     uint32_t SingleDataTypeInformation::getBlockserialNumber () {
         return m_iBlockserialNum;
     }
@@ -122,7 +119,6 @@ namespace NS_DataIndex {
      * 说明：获取引导块号
      * 返回值：引导块号
      * 更新时间：2016/1/28*/
-    const
     uint32_t SingleDataTypeInformation::getBootBlockNumber () {
         return m_iBootBlockNum;
     }

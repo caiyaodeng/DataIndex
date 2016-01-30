@@ -39,14 +39,14 @@ namespace NS_DataIndex {
          * 参数：偏移量
          * 返回值：是否移动成功
          * 更新时间：2016/1/29*/
-        bool moveInputSeek (const OFFSET iOffsetIn);
+        bool moveInputSeek (OFFSET iOffsetIn);
 
         /**
          * 说明：读取指针位置更新
          * 参数：偏移量
          * 返回值：是否移动成功
          * 更新时间：2016/1/29*/
-        bool moveOutputSeek (const OFFSET iOffsetIn);
+        bool moveOutputSeek (OFFSET iOffsetIn);
 
     public:
         explicit

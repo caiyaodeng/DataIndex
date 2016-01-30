@@ -3,6 +3,7 @@
 
 #include "EntityMyDataType.h"
 #include "EntityTypeValue.h"
+
 namespace NS_DataIndex {
 
     /**

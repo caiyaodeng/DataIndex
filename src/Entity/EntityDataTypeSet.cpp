@@ -16,7 +16,7 @@ namespace NS_DataIndex {
     }
 
 
-    bool DataTypeSet::setDataTypeNumber (const uint32_t iDataTypeNum) {
+    bool DataTypeSet::setDataTypeNumber (uint32_t iDataTypeNum) {
         m_iDataTypeNum = iDataTypeNum;
         if (m_iDataTypeNum == 0) {
             return false;
@@ -28,7 +28,6 @@ namespace NS_DataIndex {
      * 说明：获取数据类型长度
      * 返回值数据类型长度
      * 更新时间：2016/1/28*/
-    const
     uint32_t DataTypeSet::getDataTypeNumber () {
         return m_iDataTypeNum;
     }

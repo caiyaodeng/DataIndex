@@ -1,6 +1,10 @@
 #ifndef _ENTITY_SINGLE_DATA_TYPE_INFORMATION_H_
 #define _ENTITY_SINGLE_DATA_TYPE_INFORMATION_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
@@ -29,14 +33,14 @@ namespace NS_DataIndex {
          * 参数：数据类型结构长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataStructureLength (const uint32_t iDataStructureLength);
+        bool setDataStructureLength (uint32_t iDataStructureLength);
 
         /**
          * 说明：设置数据类型名称长度
          * 参数：数据类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataNameLength (const uint32_t iDataNameLength);
+        bool setDataNameLength (uint32_t iDataNameLength);
 
         /**
          * 说明：设置数据类型名称
@@ -50,27 +54,25 @@ namespace NS_DataIndex {
          * 参数：对应块号
          * 返回值：是否设置成功
          * 更新时间:2016/1/27*/
-        bool setBlockserialNumber (const uint32_t m_iBlockserialNum);
+        bool setBlockserialNumber (uint32_t m_iBlockserialNum);
 
         /**
          * 说明：设置引导块号
          * 参数：引导块号
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setBootBlockNumber (const uint32_t m_iBootBlockNum);
+        bool setBootBlockNumber (uint32_t m_iBootBlockNum);
 
         /**
          * 说明：获取数据类型结构长度
          * 返回值：数据类型结构长度
          * 更新时间：2016/1/27*/
-        const
         uint32_t getDataStructureLength ();
 
         /**
          * 说明：获取数据类型名称长度
          * 返回值：数据类型名称长度
          * 更新时间：2016/1/27*/
-        const
         uint32_t getDataNameLength ();
 
         /**
@@ -84,17 +86,19 @@ namespace NS_DataIndex {
          * 说明：获取对应块号
          * 返回值：对应块号
          * 更新时间：2016/1/27*/
-        const
         uint32_t getBlockserialNumber ();
 
         /**
          * 说明：获取引导块号
          * 返回值：引导块号
          * 更新时间：2016/1/28*/
-        const
         uint32_t getBootBlockNumber ();
     };
 
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* ENTITY_SINGLE_DATA_TYPE_INFORMATION_H_ */

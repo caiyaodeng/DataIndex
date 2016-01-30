@@ -1,6 +1,11 @@
 #ifndef _INTERFACE_DISK_SIMULATOR_H_
 #define _INTERFACE_DISK_SIMULATOR_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 namespace NS_DataIndex {
     
     /**
@@ -34,4 +39,9 @@ namespace NS_DataIndex {
     };
 
 }
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif

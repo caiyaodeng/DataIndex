@@ -6,7 +6,7 @@ namespace NS_DataIndex {
         :
             m_chBuffer (NULL),
             m_iValidDataLength (0),
-            m_iBlockSerialNumber (-1) {
+            m_iBlockSerialNumber (0) {
                 m_chBuffer = (uint8_t *) malloc (SINGLE_BLOCK_DATA_SIZE);
                 memset (m_chBuffer, 0, SINGLE_BLOCK_DATA_SIZE);
     }
@@ -123,7 +123,7 @@ namespace NS_DataIndex {
      * 参数：逻辑块号
      * 返回值：是否设置成功
      * 更新时间：2016/1/29*/
-    bool ModelDiskBufferManagement::setActivelogicalBlockSerialNum (uint32_t iLogicalSerialNum) {
+    bool ModelDiskBufferManagement::setActivelogicalBlockSerialNumber (uint32_t iLogicalSerialNum) {
         m_iBlockSerialNumber = iLogicalSerialNum;
         return true;
     }
@@ -200,5 +200,6 @@ namespace NS_DataIndex {
 //            return pBlock;
 //        }
 
+        return NULL;
     }
 }

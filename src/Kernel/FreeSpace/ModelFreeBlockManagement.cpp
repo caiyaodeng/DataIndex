@@ -95,6 +95,7 @@ namespace NS_DataIndex {
 //        }
 
 //        return getRealFreeBlock(iBlockNum, iBlockSetOut);
+        return 0;
     }
 
     /**

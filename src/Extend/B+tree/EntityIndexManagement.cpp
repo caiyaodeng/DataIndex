@@ -2,21 +2,47 @@
 
 namespace NS_DataIndex {
 
-    BPlusTree::BPlusTree () {}
+    BlockSerialNumEntryNode::BlockSerialNumEntryNode ()
+        :
+                m_pBlockSerialNum (NULL),
+                m_pNext (NULL) {
+                    m_pBlockSerialNum = new BlockSerialNumEntry ();
+    }
 
-    BPlusTree::~BPlusTree() {}
+    BlockSerialNumEntryNode::~BlockSerialNumEntryNode () {
+        if (m_pBlockSerialNum!=NULL) {
+            delete m_pBlockSerialNum;
+            m_pBlockSerialNum = NULL;
+        }
+    }
 
-    uint32_t BPlusTree::CreateBinTree (TreeNode **rootp,ElementType **lp) {
-        ElementType CurrElement;
+    BlockSerialNumEntry::BlockSerialNumEntry ()
+        :
+                m_iBlockSerialNum (0) {
+    }
 
-        if(*lp==NULL) return 0; /*    字符串不存在，返回 0 */
-        if(**lp==0) return 1; /*    字符串为空，返回1      */
-        CurrElement=*(*lp);
-        (*lp)++;
-        if(CurrElement=='.') { (*rootp)=NULL; return 1; }
-        if(!((*rootp)=(TreeNode *) malloc(sizeof(TreeNode))) ) return 0;
-        (*rootp)->data=CurrElement;
-        if(!CreateBinTree(&(*rootp)->LChild,lp)) return 0;
-        return CreateBinTree(&(*rootp)->RChild,lp);
+    BlockSerialNumEntry::~BlockSerialNumEntry () {
+
+    }
+
+    /**
+     * 说明：设置块号
+     * 参数：块号
+     * 返回值：是否设置成功
+     * 更新时间：2016/1/30*/
+    bool BlockSerialNumEntry::setBlockSerialNumber (uint32_t iBlockSerialNum) {
+        m_iBlockSerialNum = iBlockSerialNum;
+        if (m_iBlockSerialNum == 0) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * 说明：获取
+     * 返回值：块号
+     * 更新时间：2016/1/30*/
+    uint32_t BlockSerialNumEntry::getBlockSerialNumber () {
+        return m_iBlockSerialNum;
     }
 }

@@ -1,6 +1,10 @@
 ﻿#ifndef _MODEL_DISK_BUFFER_MANAGEMENT_H_
 #define _MODEL_DISK_BUFFER_MANAGEMENT_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 #include <string.h>
 #include "../Entity/EntityBlock.h"
@@ -34,7 +38,7 @@ namespace NS_DataIndex {
          * 参数：新数据， 新数据长度，溢出数据，溢出长度,物理块号
          * 返回值：是否操作成功
          * 更新时间：2016/1/29*/
-        bool mergeData (const uint8_t *pNewBufIn, const uint32_t iLengthIn, uint8_t *&pBufOut, uint32_t &iLengthOut, uint32_t iPhysicalBlockNumber);
+        bool mergeData (const uint8_t *pNewBufIn, uint32_t iLengthIn, uint8_t *&pBufOut, uint32_t &iLengthOut, uint32_t iPhysicalBlockNumber);
 
         /**
          * 说明：清空缓冲区
@@ -66,7 +70,7 @@ namespace NS_DataIndex {
          * 参数：逻辑块号
          * 返回值：是否设置成功
          * 更新时间：2016/1/29*/
-        bool setActivelogicalBlockSerialNum (uint32_t iLogicalSerialNum);
+        bool setActivelogicalBlockSerialNumber (uint32_t iLogicalSerialNum);
 
         /**
          * 说明:放入整块尾块数据
@@ -90,4 +94,9 @@ namespace NS_DataIndex {
         Block *getBufDataBlock ();
     };
 }
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif
