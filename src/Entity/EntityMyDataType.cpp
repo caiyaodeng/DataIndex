@@ -35,7 +35,7 @@ namespace NS_DataIndex {
      * 参数：类型名称长度
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool MyDataType::setTypeNameLength (const uint32_t iTypeNameLength) {
+    bool MyDataType::setTypeNameLength (uint32_t iTypeNameLength) {
         m_iTypeNameLength = iTypeNameLength;
         if (m_iTypeNameLength == 0) {
             return false;
@@ -61,7 +61,7 @@ namespace NS_DataIndex {
      * 参数：表示类型长度
      * 返回值：是否设置成功
      * 更新时间：2016/1/29*/
-    bool MyDataType::setTypelength (const uint32_t iTypeLength) {
+    bool MyDataType::setTypelength (uint32_t iTypeLength) {
         m_iTypeLength = iTypeLength;
         if (m_iTypeLength == 0) {
             return false;
@@ -82,7 +82,6 @@ namespace NS_DataIndex {
      * 说明：获取类型名称长度
      * 返回值：类型名称长度
      * 更新时间：2016/1/28*/
-    const
     uint32_t MyDataType::getTypeNameLength () {
         return m_iTypeNameLength;
     }
@@ -100,7 +99,6 @@ namespace NS_DataIndex {
      * 说明：获取
      * 返回值：表示类型长度
      * 更新时间：2016/1/29*/
-    const
     uint32_t MyDataType::getTypeLength () {
         return m_iTypeLength;
     }

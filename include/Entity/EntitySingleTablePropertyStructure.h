@@ -11,7 +11,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     class SingleTablePropertyStructure {
 
-            MyTableProperty *objMyTablePropertyHead;    //我的表属性对象
+            MyTableProperty *m_pMyTablePropertyHead;    //我的表属性对象
             uint32_t m_iTablePropertyNum;               //表属性数量
 
         public:
@@ -25,17 +25,15 @@ namespace NS_DataIndex {
              * 参数：表属性数量
              * 返回值：是否设置成功
              * 更新时间：2016/1/28*/
-            bool setTablePropertyNumber (const uint32_t iTablePropertyNum);
+            bool setTablePropertyNumber (uint32_t iTablePropertyNum);
 
             /**
              * 说明：获取表属性数量
              * 返回值：表属性数量
              * 更新时间：2016/1/28*/
-            const
             uint32_t getTablePropertyNumber ();
 
     };
 }
-
 
 #endif /* ENTITY_SINGLE_TABLE_PROPERTY_STRUCTURE_H_ */

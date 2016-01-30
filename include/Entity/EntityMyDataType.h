@@ -1,11 +1,13 @@
 #ifndef _ENTITY_MY_DATA_TYPE_H_
 #define _ENTITY_MY_DATA_TYPE_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdlib.h>
 #include <string.h>
 #include <stdint.h>
-
-//using namespace std;
 
 namespace NS_DataIndex {
 
@@ -38,7 +40,7 @@ namespace NS_DataIndex {
          * 参数：类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setTypeNameLength (const uint32_t iTypeNameLength);
+        bool setTypeNameLength (uint32_t iTypeNameLength);
 
         /**
          * 说明：设置表示类型
@@ -52,7 +54,7 @@ namespace NS_DataIndex {
          * 参数：表示类型长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/29*/
-        bool setTypelength (const uint32_t iTypeLength);
+        bool setTypelength (uint32_t iTypeLength);
 
         /**
          * 说明：获取类型名称
@@ -65,7 +67,6 @@ namespace NS_DataIndex {
          * 说明：获取类型名称长度
          * 返回值：类型名称长度
          * 更新时间：2016/1/28*/
-        const
         uint32_t getTypeNameLength ();
 
         /**
@@ -79,10 +80,13 @@ namespace NS_DataIndex {
          * 说明：获取
          * 返回值：表示类型长度
          * 更新时间：2016/1/29*/
-        const
         uint32_t getTypeLength ();
     };
 
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* ENTITY_MY_DATA_TYPE_H_ */

@@ -6,11 +6,21 @@ namespace NS_DataIndex {
         m_iInitBlockNum (0),
         m_iNewExpandBlockNum (0),
         m_iDataTypeNum (0),
-        m_objSingleDataIndexEntry (NULL) {
+        m_objSingleDataIndexEntry (NULL),
+        m_pHeadBlockSerialNum (NULL) {
             m_objSingleDataIndexEntry = new SingleDataIndexEntry ();
+            m_pHeadBlockSerialNum = new BlockSerialNumEntryNode ();
     }
 
     DataIndexDataDocument::~DataIndexDataDocument () {
+
+    }
+
+    /**
+     * 说明：递归释放本对象
+     * 参数：B+树管理对象节点
+     * 更新时间：2016/1/30*/
+    void DataIndexDataDocument::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
 
     }
 
@@ -87,11 +97,21 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：设置数据索引分区块编号
-     * 返回值：数据索引分区块编号
-     * 更新时间：2016/1/28*/
-    uint32_t DataIndexDataDocument::getDataIndexPartitionBlockNumber () {
-        return 0;
+     * 说明：新增一个B+树管理对象
+     * 参数：新的B+树管理对象
+     * 返回值：是否增加成功
+     * 更新时间：2016/1/30*/
+    bool DataIndexDataDocument::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
+        return true;
     }
 
+    /**
+     * 说明：查询一个B+树管理对象
+     * 参数：块编号
+     * 返回值：一个B+树管理对象
+     * 更新时间：2016/1/30*/
+    const
+    BlockSerialNumEntry *DataIndexDataDocument::DataIndexDataDocument::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+        return NULL;
+    }
 }

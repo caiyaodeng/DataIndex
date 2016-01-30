@@ -11,7 +11,6 @@
 #include "include/Entity/EntitySingleDataIndexEntry.h"
 #include "include/Entity/EntityDataIndexDataDocument.h"
 #include "include/Entity/EntityTypeValue.h"
-
 using namespace std;
 
 template <typename T>
@@ -26,7 +25,6 @@ int main(){
         NS_DataIndex::DataTypeStructure *objDataTypeStructure = new NS_DataIndex::DataTypeStructure();
         NS_DataIndex::DataTypeSet *objDataTypeSet = new NS_DataIndex::DataTypeSet();
         NS_DataIndex::DataIndexDataDocument *objDataIndexDataDocument= new NS_DataIndex::DataIndexDataDocument();
-        NS_DataIndex::MyTableProperty *objMyTableProperty = new NS_DataIndex::MyTableProperty();
         NS_DataIndex::SingleDataIndexEntry *objSingleDataIndexEntry = new NS_DataIndex::SingleDataIndexEntry();
         NS_DataIndex::SingleTablePropertyStructure *objSingleTablePropertyStructure = new NS_DataIndex::SingleTablePropertyStructure();
         NS_DataIndex::TableSet *objTableSet = new NS_DataIndex::TableSet();
@@ -34,7 +32,7 @@ int main(){
         NS_DataIndex::MyDataType *objMyDataType = new NS_DataIndex::MyDataType();
         NS_DataIndex::SingleDataTypeInformation *objSingleDataTypeInformation = new NS_DataIndex::SingleDataTypeInformation();
 
-        uint32_t a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v;
+        uint32_t a,b,c,d,f,g,h,k,l,m,n,o,p,r,s,t,u,v;
         uint8_t *Dname1,*Dname2,*Dname3;
 
         objDataTypeStructure->setDatabaseName((uint8_t *)"Ion1");
@@ -51,25 +49,19 @@ int main(){
         d = objDataTypeSet->getDataTypeNumber();
         cout <<d<<endl;
 
-        objDataIndexDataDocument->setDataIndexPartitionBlockNumber(5);
-        e = objDataIndexDataDocument->getDataIndexPartitionBlockNumber();
         objDataIndexDataDocument->setDataTypeNumber(6);
         f = objDataIndexDataDocument->getDataTypeNumber();
         objDataIndexDataDocument->setInitBlockNumber(7);
         g = objDataIndexDataDocument->getInitBlockNumber();
         objDataIndexDataDocument->setNewExpandBlockNumber(8);
         h = objDataIndexDataDocument->getNewExpandBlockNumber();
-        cout<<e<<"  "<<f<<"  "<<g<<"  "<<h<<endl;
+        cout<<"  "<<f<<"  "<<g<<"  "<<h<<endl;
 
-        objSingleDataIndexEntry->setDataPartitionBlockserialNumber(9);
-        i = objSingleDataIndexEntry->getDataPartitionBlockserialNumber();
-        objSingleDataIndexEntry->setIndexPartitionBlockserialNumber(10);
-        j = objSingleDataIndexEntry->getIndexPartitionBlockserialNumber();
         objSingleDataIndexEntry->setInitBlockNumber(11);
         k = objSingleDataIndexEntry->getInitBlockNumber();
         objSingleDataIndexEntry->setNewExpandBlockNumber(12);
         l = objSingleDataIndexEntry->getNewExpandBlockNumber();
-        cout << i <<"   "<<j << "  "<< k<< "  "<<l<<endl;
+        cout << "  "<< k<< "  "<<l<<endl;
 
         objSingleTablePropertyStructure->setTablePropertyNumber(13);
         m = objSingleTablePropertyStructure->getTablePropertyNumber();
@@ -110,7 +102,7 @@ int main(){
         obj_4->m_tValue = 7;
 
         NS_DataIndex::EntityTypeValue <char *> *obj_5 = new NS_DataIndex::EntityTypeValue <char *>();
-        obj_5->m_tValue = "nihao,shijie";
+        obj_5->m_tValue = (char *)"nihao,shijie";
 
         cout << obj_4->m_tValue << endl;
         cout << obj_5->m_tValue << endl;

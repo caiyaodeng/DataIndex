@@ -1,6 +1,10 @@
 #ifndef _ENTITY_DATA_TYPE_SET_H_
 #define _ENTITY_DATA_TYPE_SET_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "EntitySingleDataTypeInformation.h"
 
 namespace NS_DataIndex {
@@ -25,18 +29,19 @@ namespace NS_DataIndex {
          * 参数：数据类型数量
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setDataTypeNumber (const uint32_t iDataTypeNum);
+        bool setDataTypeNumber (uint32_t iDataTypeNum);
 
         /*
          * 说明：获取数据类型长度
          * 返回值数据类型长度
          * 更新时间：2016/1/28*/
-        const
         uint32_t getDataTypeNumber ();
     };
 
 }
 
-
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* ENTITYDATATYPESET_H_ */

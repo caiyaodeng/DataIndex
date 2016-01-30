@@ -25,13 +25,13 @@ namespace NS_DataIndex {
          * 参数：表总数
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setTableTotalNumber (const uint32_t iTableTotalNum);
+        bool setTableTotalNumber (uint32_t iTableTotalNum);
 
         /**
          * 说明：获取表总数
          * 返回值：表总数
          * 更新时间：2016/1/28*/
-        const uint32_t getTableTotalNumber ();
+        uint32_t getTableTotalNumber ();
     };
 
 }

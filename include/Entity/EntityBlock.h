@@ -1,6 +1,10 @@
 ﻿#ifndef _ENTITY_BLOCK_H_
 #define _ENTITY_BLOCK_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /*块常量定义*/
 #define SINGLE_BLOCK_SIZE                    16777216   //单块大小
 #define SINGLE_BLOCK_DATA_SIZE               16777088   //单块有效数据区大小
@@ -12,7 +16,7 @@
 #include <string.h>
 #include <stdint.h>
 #include "../Kernel/ConfigDefault.h"
-//using namespace std;
+
 namespace NS_DataIndex {
 
     /**
@@ -42,7 +46,7 @@ namespace NS_DataIndex {
          * 参数：有效数据，数据量
          * 返回值：是否成功
          * 更新时间：2016/1/29*/
-        bool putValidData (const uint8_t *pBufIn, const uint32_t blockLengthIn);
+        bool putValidData (const uint8_t *pBufIn, uint32_t blockLengthIn);
 
         /**
          * 说明：获取本块中有效数据量
@@ -74,5 +78,10 @@ namespace NS_DataIndex {
     };
 
 }
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif 
  
