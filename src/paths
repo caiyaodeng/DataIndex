@@ -1,7 +1,0 @@
-
-#libentity
-#export LIBENTITY_PREFIX=../ENTITY
-export LIBENTITY_INCL=../include/Entity
-export LIBENTITY_CFLAGS=-I$(LIBENTITY_INCL)
-export LIBENTITY_LDPATH=../lib
-export LIBENTITY_LDFLAGS=-L$(LIBENTITY_LDPATH) -lentity
