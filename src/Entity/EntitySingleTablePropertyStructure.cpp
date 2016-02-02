@@ -4,15 +4,15 @@ namespace NS_DataIndex {
 
     SingleTablePropertyStructure::SingleTablePropertyStructure ()
             :
-                m_pMyTablePropertyHead (NULL),
+                m_pHeadCustomTableProperty (NULL),
                 m_iTablePropertyNum (0) {
-        m_pMyTablePropertyHead = new MyTableProperty ();
+        m_pHeadCustomTableProperty = new CustomTableProperty ();
     }
 
     SingleTablePropertyStructure::~SingleTablePropertyStructure () {
-        if (m_pMyTablePropertyHead != NULL) {
-            delete m_pMyTablePropertyHead;
-            m_pMyTablePropertyHead = NULL;
+        if (m_pHeadCustomTableProperty != NULL) {
+            delete m_pHeadCustomTableProperty;
+            m_pHeadCustomTableProperty = NULL;
         }
     }
 
@@ -37,4 +37,30 @@ namespace NS_DataIndex {
         return m_iTablePropertyNum;
     }
 
+    /**
+     * 说明：添加一个类型
+     * 参数：数据类型结构信息
+     * 返回值：是否添加成功
+     * 更新时间：2016/2/1*/
+    bool SingleTablePropertyStructure::addDataType (const CustomTableProperty *pHeadCustomTableProperty) {
+        return true;
+    }
+
+    /**
+     * 说明：删除一个类型
+     * 参数：数据类型名称
+     * 返回值：是否删除成功
+     * 更新时间：2016/2/1*/
+    bool SingleTablePropertyStructure::deleteDataType (const uint8_t *pDataTypeNameIn) {
+        return true;
+    }
+
+    /**
+     * 说明：查询一个类型
+     * 参数：数据类型名称
+     * 返回值：是否找到
+     * 更新时间：2016/2/1*/
+    bool SingleTablePropertyStructure::quaryDataType (const uint8_t *pDataTypeNameIn) {
+        return true;
+    }
 }

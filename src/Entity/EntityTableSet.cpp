@@ -5,14 +5,14 @@ namespace NS_DataIndex {
     TableSet::TableSet ()
         :
         m_iTableTotalNum (0),
-        m_objSingleTablePropertyStructure (NULL) {
-            m_objSingleTablePropertyStructure = new SingleTablePropertyStructure ();
+        m_pSingleTablePropertyStructureSet (NULL) {
+        m_pSingleTablePropertyStructureSet = new SingleTablePropertyStructure ();
     }
 
     TableSet::~TableSet () {
-        if (m_objSingleTablePropertyStructure != NULL) {
-            delete m_objSingleTablePropertyStructure;
-            m_objSingleTablePropertyStructure = NULL;
+        if (m_pSingleTablePropertyStructureSet != NULL) {
+            delete m_pSingleTablePropertyStructureSet;
+            m_pSingleTablePropertyStructureSet = NULL;
         }
     }
 

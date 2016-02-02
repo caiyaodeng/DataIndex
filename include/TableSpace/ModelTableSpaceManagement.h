@@ -2,7 +2,7 @@
 #define _MODEL_TABLE_SPACE_MANAGEMENT_H_
 
 #include "../Entity/EntityTableSet.h"
-#include "../Extend/B+tree/EntityIndexManagement.h"
+#include "../Extend/DirectIndex/EntityIndexManagement.h"
 namespace NS_DataIndex {
 
     /**
@@ -13,11 +13,11 @@ namespace NS_DataIndex {
 
         TableSet *m_objTableSet;                            //表集合数组
         uint32_t m_iExpandBlockNum;                         //当前扩充块数
-        BlockSerialNumEntryNode  *m_pHeadBlockSerialNum;  //B+树管理对象
+        BlockSerialNumEntryNode  *m_pHeadBlockSerialNum;    //链表管理对象
 
         /**
          * 说明：递归释放本对象
-         * 参数：B+树管理对象节点
+         * 参数：链表管理对象节点
          * 更新时间：2016/1/30*/
         void recursiveReleaseMemory (BlockSerialNumEntryNode *pNode);
 
@@ -56,16 +56,23 @@ namespace NS_DataIndex {
         bool expandTableSpace ();
 
         /**
-         * 说明：新增一个B+树管理对象
-         * 参数：新的B+树管理对象
+         * 说明：新增一个链表管理对象
+         * 参数：新的链表管理对象
          * 返回值：是否增加成功
          * 更新时间：2016/1/30*/
         bool addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn);
 
         /**
-         * 说明：查询一个B+树管理对象
+         * 说明：删除一个链表管理对象
          * 参数：块编号
-         * 返回值：一个B+树管理对象
+         * 返回值：是否删除成功
+         * 更新时间：2016/1/30*/
+        bool deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn);
+
+        /**
+         * 说明：查询一个链表管理对象
+         * 参数：块编号
+         * 返回值：一个链表管理对象
          * 更新时间：2016/1/30*/
         const
         BlockSerialNumEntry *quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn);

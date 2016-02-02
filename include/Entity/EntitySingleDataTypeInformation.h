@@ -19,8 +19,8 @@ namespace NS_DataIndex {
         uint32_t m_iDataStructureLength;    //数据类型结构长度
         uint32_t m_iDataNameLength;         //数据类型名称长度
         uint8_t *m_pDataName;               //数据类型名称
-        uint32_t m_iBlockserialNum;         //对应块号
-        uint32_t m_iBootBlockNum;           //引导块号
+        uint32_t m_iTableSerialNum;         //对应块号
+        uint32_t m_iStartBlockserialNum;    //引导块号
 
     public:
         explicit
@@ -36,32 +36,25 @@ namespace NS_DataIndex {
         bool setDataStructureLength (uint32_t iDataStructureLength);
 
         /**
-         * 说明：设置数据类型名称长度
-         * 参数：数据类型名称长度
+         * 说明：设置数据类型名称,数据类型名称长度
+         * 参数：数据类型名称,数据类型名称长度
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setDataNameLength (uint32_t iDataNameLength);
-
-        /**
-         * 说明：设置数据类型名称
-         * 参数：数据类型名称
-         * 返回值：是否设置成功
-         * 更新时间：2016/1/27*/
-        bool setDataName (const uint8_t * pDataName);
+        bool setDataType (const uint8_t * pDataTypeName, uint32_t iDataTypeNameLength);
 
         /**
          * 说明：设置对应块号
          * 参数：对应块号
          * 返回值：是否设置成功
          * 更新时间:2016/1/27*/
-        bool setBlockserialNumber (uint32_t m_iBlockserialNum);
+        bool setTableSerialNumber (uint32_t iTableSerialNum);
 
         /**
          * 说明：设置引导块号
          * 参数：引导块号
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setBootBlockNumber (uint32_t m_iBootBlockNum);
+        bool setStartBlockserialNumber (uint32_t iStartBlockserialNum);
 
         /**
          * 说明：获取数据类型结构长度
@@ -70,29 +63,23 @@ namespace NS_DataIndex {
         uint32_t getDataStructureLength ();
 
         /**
-         * 说明：获取数据类型名称长度
-         * 返回值：数据类型名称长度
+         * 说明：获取数据类型名称,数据类型名称长度
+         * 参数：数据类型名称接收器,数据类型名称长度接收器
+         * 返回值：是否获取成功
          * 更新时间：2016/1/27*/
-        uint32_t getDataNameLength ();
-
-        /**
-         * 说明：获取数据类型名称
-         * 返回值：数据类型名称
-         * 更新时间：2016/1/27*/
-        const
-        uint8_t *getDataName ();
+        bool getDataType (uint8_t *&pDataTypeNameOut, uint32_t &iDataTypeNameLengthOut);
 
         /**
          * 说明：获取对应块号
          * 返回值：对应块号
          * 更新时间：2016/1/27*/
-        uint32_t getBlockserialNumber ();
+        uint32_t getTableSerialNumber ();
 
         /**
          * 说明：获取引导块号
          * 返回值：引导块号
          * 更新时间：2016/1/28*/
-        uint32_t getBootBlockNumber ();
+        uint32_t getStartBlockserialNumber ();
     };
 
 }

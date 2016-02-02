@@ -18,7 +18,7 @@ namespace NS_DataIndex {
         uint8_t *m_pDatabaseName;               //数据库名称
         uint32_t m_iInitBlockNum;               //初始块数量
         uint32_t m_iSingleExpandBlockNum;       //单次扩充块数量
-        uint32_t m_iNewExpandBlockNum;          //新扩充块数
+        uint32_t m_iExtendedBlockNum;           //新扩充块数
         DataTypeSet *m_objDataTypeSet;          //所有数据类型对象
 
     public:
@@ -53,7 +53,7 @@ namespace NS_DataIndex {
          * 参数：新扩充块数
          * 返回值：是否设置成功
          * 更新时间：2016/1/27*/
-        bool setNewExpandBlockNumber (uint32_t iNewExpandBlockNum);
+        bool setExtendedBlockNumber (uint32_t iExtendedBlockNum);
 
         /**
          * 说明：获取数据库名称
@@ -77,7 +77,7 @@ namespace NS_DataIndex {
          * 说明：获取新扩充块数
          * 返回值：新扩充块数
          * 更新时间：2016/1/27*/
-        uint32_t getNewExpandBlockNumber ();
+        uint32_t getExtendedBlockNumber ();
     };
 
 }

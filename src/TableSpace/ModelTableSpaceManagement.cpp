@@ -25,7 +25,7 @@ namespace NS_DataIndex {
 
     /**
      * 说明：递归释放本对象
-     * 参数：B+树管理对象节点
+     * 参数：链表管理对象节点
      * 更新时间：2016/1/30*/
     void ModelTableSpace::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
 
@@ -67,8 +67,8 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：新增一个B+树管理对象
-     * 参数：新的B+树管理对象
+     * 说明：新增一个链表管理对象
+     * 参数：新的链表管理对象
      * 返回值：是否增加成功
      * 更新时间：2016/1/30*/
     bool ModelTableSpace::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
@@ -76,9 +76,18 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：查询一个B+树管理对象
+     * 说明：删除一个链表管理对象
      * 参数：块编号
-     * 返回值：一个B+树管理对象
+     * 返回值：是否删除成功
+     * 更新时间：2016/1/30*/
+    bool ModelTableSpace::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+        return true;
+    }
+
+    /**
+     * 说明：查询一个链表管理对象
+     * 参数：块编号
+     * 返回值：一个链表管理对象
      * 更新时间：2016/1/30*/
     const
     BlockSerialNumEntry *ModelTableSpace::quaryBlockSerialNumEntry (const uint32_t iBlockSerialNumIn) {

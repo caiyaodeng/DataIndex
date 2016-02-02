@@ -51,7 +51,7 @@ namespace NS_DataIndex {
         bool setBlockSerialNumber (uint32_t iBlockSerialNum);
 
         /**
-         * 说明：获取
+         * 说明：获取块号
          * 返回值：块号
          * 更新时间：2016/1/30*/
         uint32_t getBlockSerialNumber ();

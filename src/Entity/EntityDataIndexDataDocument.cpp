@@ -4,21 +4,29 @@ namespace NS_DataIndex {
     DataIndexDataDocument::DataIndexDataDocument ()
     :
         m_iInitBlockNum (0),
-        m_iNewExpandBlockNum (0),
+        m_iExtendedBlockNum (0),
         m_iDataTypeNum (0),
-        m_objSingleDataIndexEntry (NULL),
+        m_pSingleDataIndexEntrySet (NULL),
         m_pHeadBlockSerialNum (NULL) {
-            m_objSingleDataIndexEntry = new SingleDataIndexEntry ();
+            m_pSingleDataIndexEntrySet = new SingleDataIndexEntry ();
             m_pHeadBlockSerialNum = new BlockSerialNumEntryNode ();
     }
 
     DataIndexDataDocument::~DataIndexDataDocument () {
+        if (m_pSingleDataIndexEntrySet != NULL) {
+            delete m_pSingleDataIndexEntrySet;
+            m_pSingleDataIndexEntrySet = NULL;
+        }
 
+        if (m_pHeadBlockSerialNum != NULL) {
+            delete m_pHeadBlockSerialNum;
+            m_pHeadBlockSerialNum = NULL;
+        }
     }
 
     /**
      * 说明：递归释放本对象
-     * 参数：B+树管理对象节点
+     * 参数：链表管理对象节点
      * 更新时间：2016/1/30*/
     void DataIndexDataDocument::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
 
@@ -42,9 +50,9 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool DataIndexDataDocument::setNewExpandBlockNumber (uint32_t iNewExpandBlockNum) {
-        m_iNewExpandBlockNum = iNewExpandBlockNum;
-        if (m_iNewExpandBlockNum == 0) {
+    bool DataIndexDataDocument::setExtendedBlockNumber (uint32_t iExtendedBlockNum) {
+        m_iExtendedBlockNum= iExtendedBlockNum;
+        if (m_iExtendedBlockNum == 0) {
             return false;
         }
         return true;
@@ -64,15 +72,6 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：设置数据索引分区块编号
-     * 参数：数据索引分区块编号
-     * 返回值：是否设置成功
-     * 更新时间：2016/1/28*/
-    bool DataIndexDataDocument::setDataIndexPartitionBlockNumber (uint32_t iDataIndexPartitionBlockNum) {
-        return true;
-    }
-
-    /**
      * 说明：获取初始块数量
      * 返回值：初始块数量
      * 更新时间：2016/1/28*/
@@ -84,12 +83,12 @@ namespace NS_DataIndex {
      * 说明：获取新扩充块数
      * 返回值：新扩充块数
      * 更新时间：2016/1/28*/
-    uint32_t DataIndexDataDocument::getNewExpandBlockNumber () {
-        return m_iNewExpandBlockNum;
+    uint32_t DataIndexDataDocument::getExtendedBlockNumber () {
+        return m_iExtendedBlockNum;
     }
 
     /**
-      * 说明：设置数据类型数量
+      * 说明：获取数据类型数量
       * 返回值：数据类型数量
       * 更新时间：2016/1/28*/
     uint32_t DataIndexDataDocument::getDataTypeNumber () {
@@ -97,21 +96,58 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：新增一个B+树管理对象
-     * 参数：新的B+树管理对象
+     * 说明：新增单数据引导对象
+     * 参数：新的单数据引导对象
+     * 返回值：是否增加成功
+     * 更新时间：2016/2/1*/
+    bool DataIndexDataDocument::addSingleDataIndexEntry (const SingleDataIndexEntryNode *pSingleDataIndexEntryNodeIn) {
+        return true;
+    }
+
+    /*
+     * 说明：删除单数据引导对象
+     * 参数：数据类型标志位
+     * 返回值：是否删除成功
+     * 更新时间:2016/2/1*/
+    bool DataIndexDataDocument::deleteSingleDataIndexEntr (const uint8_t *pFlagIn) {
+        return true;
+    }
+
+    /**
+     * 说明：查询单数据引导对象
+     * 参数：数据类型标志位，标志位长度
+     * 返回值：单数据引导对象
+     * 更新时间：2016/2/1*/
+    const
+    DataIndexEntrySet *DataIndexDataDocument::quarySingleDataIndexEntry (const uint8_t *pFlagIn, uint32_t iFlagLengthIn) {
+        return NULL;
+    }
+
+    /**
+     * 说明：新增一个链表管理对象
+     * 参数：新的链表管理对象
      * 返回值：是否增加成功
      * 更新时间：2016/1/30*/
     bool DataIndexDataDocument::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
         return true;
     }
 
-    /**
-     * 说明：查询一个B+树管理对象
+    /*
+     * 说明：删除链表管理对象
      * 参数：块编号
-     * 返回值：一个B+树管理对象
+     * 返回值：是否删除成功
+     * 更新时间:2016/2/1*/
+    bool DataIndexDataDocument::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+        return true;
+    }
+
+    /**
+     * 说明：查询一个链表管理对象
+     * 参数：块编号
+     * 返回值：一个链表管理对象
      * 更新时间：2016/1/30*/
     const
-    BlockSerialNumEntry *DataIndexDataDocument::DataIndexDataDocument::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+    BlockSerialNumEntry *DataIndexDataDocument::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
         return NULL;
     }
 }

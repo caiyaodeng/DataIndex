@@ -83,18 +83,28 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：新增一个B+树对象
-     * 参数：新增一个B+树对象
+     * 说明：新增一个链表对象
+     * 参数：新增一个链表对象
      * 返回值：是否增加成功
      * 更新时间：2016/1/30*/
     bool DataTypeManagement::addBlockSerialNumEntry (const SingleDataIndexEntryNode *pBlockSerialNumEntryNodeIn) {
         return true;
     }
 
-    /**
-     * 说明：查询B+树对象
+    /*
+     * 说明：删除链表管理对象
      * 参数：块编号
-     * 返回值：B+树对象
+     * 返回值：是否删除成功
+     * 更新时间:2016/2/1*/
+    bool DataTypeManagement::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+        return true;
+    }
+
+
+    /**
+     * 说明：查询链表对象
+     * 参数：块编号
+     * 返回值：链表对象
      * 更新时间：2016/1/30*/
     const
     BlockSerialNumEntry *DataTypeManagement::quaryBlockSerialNumEntry (const uint32_t iBlockSerialNumIn) {
@@ -110,13 +120,22 @@ namespace NS_DataIndex {
         return true;
     }
 
+    /*
+     * 说明：删除索引分区对象
+     * 参数：数据类型标志位
+     * 返回值：是否删除成功
+     * 更新时间:2016/2/1*/
+    bool DataTypeManagement::deleteSingleDataIndexEntry (const uint8_t *pFlagIn) {
+        return true;
+    }
+
     /**
      * 说明：查询索引分区对象
      * 参数：数据类型标志位，标志位长度
      * 返回值：索引分区对象
      * 更新时间：2016/1/30*/
     const
-    DataIndexEntry *DataTypeManagement::quarySingleDataIndexEntry (const uint8_t *pFlagIn, const uint32_t iFlagLengthIn) {
+    DataIndexEntrySet *DataTypeManagement::quarySingleDataIndexEntry (const uint8_t *pFlagIn, const uint32_t iFlagLengthIn) {
         return NULL;
     }
 }

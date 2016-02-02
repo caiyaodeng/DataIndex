@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include "../Extend/B+tree/EntityIndexManagement.h"
+#include "../Extend/DirectIndex/EntityIndexManagement.h"
 #include "../Entity/EntitySingleDataIndexEntrySet.h"
 
 namespace NS_DataIndex {
@@ -17,7 +17,7 @@ namespace NS_DataIndex {
     class DataTypeManagement {
          uint32_t m_iExpandBlockNum;                                //当前扩充块数
          uint32_t m_iDataTypeNum;                                   //数据类型数量
-         BlockSerialNumEntryNode *m_pHeadBlockSerialNumEntry;       //B+树管理对象
+         BlockSerialNumEntryNode *m_pHeadBlockSerialNumEntry;       //链表管理对象
          SingleDataIndexEntryNode *m_pHeadSingleDataIndexEntry;     //索引分区项对象
 
          /**
@@ -65,16 +65,23 @@ namespace NS_DataIndex {
          uint32_t getsetDataTypeNumber ();
 
          /**
-          * 说明：新增一个B+树对象
-          * 参数：新增一个B+树对象
+          * 说明：新增一个链表对象
+          * 参数：新增一个链表对象
           * 返回值：是否增加成功
           * 更新时间：2016/1/30*/
          bool addBlockSerialNumEntry (const SingleDataIndexEntryNode *pBlockSerialNumEntryNodeIn);
 
-         /**
-          * 说明：查询B+树对象
+         /*
+          * 说明：删除链表管理对象
           * 参数：块编号
-          * 返回值：B+树对象
+          * 返回值：是否删除成功
+          * 更新时间:2016/2/1*/
+         bool deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn);
+
+         /**
+          * 说明：查询链表对象
+          * 参数：块编号
+          * 返回值：链表对象
           * 更新时间：2016/1/30*/
          const
          BlockSerialNumEntry *quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn);
@@ -86,13 +93,20 @@ namespace NS_DataIndex {
           * 更新时间：2016/1/30*/
          bool addSingleDataIndexEntry (const SingleDataIndexEntryNode *pSingleDataIndexEntryNodeIn);
 
+         /*
+          * 说明：删除索引分区对象
+          * 参数：数据类型标志位
+          * 返回值：是否删除成功
+          * 更新时间:2016/2/1*/
+         bool deleteSingleDataIndexEntry (const uint8_t *pFlagIn);
+
          /**
           * 说明：查询索引分区对象
           * 参数：数据类型标志位，标志位长度
           * 返回值：索引分区对象
           * 更新时间：2016/1/30*/
          const
-         DataIndexEntry *quarySingleDataIndexEntry (const uint8_t *pFlagIn, uint32_t iFlagLengthIn);
+         DataIndexEntrySet *quarySingleDataIndexEntry (const uint8_t *pFlagIn, uint32_t iFlagLengthIn);
      };
 
 }

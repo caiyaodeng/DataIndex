@@ -11,7 +11,7 @@ extern "C" {
 
 namespace NS_DataIndex {
 
-    class DataIndexEntry;
+    class DataIndexEntrySet;
 
     /**
      * 说明：索引分区项
@@ -20,7 +20,7 @@ namespace NS_DataIndex {
     class SingleDataIndexEntryNode {
 
     public:
-        DataIndexEntry *m_pDataIndexEntry;
+        DataIndexEntrySet *m_pDataIndexEntrySet;
         SingleDataIndexEntryNode *m_pNext;
 
         SingleDataIndexEntryNode ();
@@ -31,7 +31,7 @@ namespace NS_DataIndex {
      * 说明：索引分区项
      * 创建人：林宇斌
      * 更新时间：2016/1/30*/
-    class DataIndexEntry {
+    class DataIndexEntrySet {
 
         uint8_t *m_pFlag;                   //数据类型标志位
         uint32_t m_iStartBlockSerialNum;    //起始块号
@@ -39,8 +39,8 @@ namespace NS_DataIndex {
         uint32_t m_lOffset;                 //偏移量
 
     public:
-        DataIndexEntry ();
-        ~DataIndexEntry ();
+        DataIndexEntrySet ();
+        ~DataIndexEntrySet ();
     public:
 
         /**

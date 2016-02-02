@@ -19,7 +19,8 @@ namespace NS_DataIndex {
     class SingleDataIndexEntry {
 
         uint32_t m_iInitBlockNum;                           //初始块数量
-        uint32_t m_iNewExpandBlockNum;                      //新扩充块数
+        uint32_t m_iExtendedBlockNum;                       //新扩充块数
+        SingleDataIndexEntryNode *m_pSingleDataEntry;       //数据分区项对象
         SingleDataIndexEntryNode *m_pSingleDataIndexEntry;  //索引分区项对象
 
         /**
@@ -46,7 +47,7 @@ namespace NS_DataIndex {
          * 参数：新扩充块数
          * 返回值：是否设置成功
          * 更新时间：2016/1/28*/
-        bool setNewExpandBlockNumber (uint32_t iNewExpandBlockNum);
+        bool setExtendedBlockNumber (uint32_t iExtendedBlockNum);
 
         /**
          * 说明：获取初始块数量
@@ -58,7 +59,7 @@ namespace NS_DataIndex {
          * 说明：获取新扩充块数
          * 返回值：新扩充块数
          * 更新时间：2016/1/28*/
-        uint32_t getNewExpandBlockNumber ();
+        uint32_t getExtendedBlockNumber ();
 
         /**
          * 说明：新增一个索引分区对象
@@ -67,13 +68,20 @@ namespace NS_DataIndex {
          * 更新时间：2016/1/30*/
         bool addSingleDataIndexEntry (const SingleDataIndexEntryNode *pSingleDataIndexEntryNodeIn);
 
+        /*
+         * 说明：删除索引分区对象
+         * 参数：数据类型标志位
+         * 返回值：是否删除成功
+         * 更新时间:2016/2/1*/
+        bool deleteSingleDataIndexEntry (const uint8_t *pFlagIn);
+
         /**
          * 说明：查询索引分区对象
          * 参数：数据类型标志位，标志位长度
          * 返回值：索引分区对象
          * 更新时间：2016/1/30*/
         const
-        SingleDataIndexEntry *quarySingleDataIndexEntry (const uint8_t *pFlagIn, uint32_t iFlagLengthIn);
+        DataIndexEntrySet *quarySingleDataIndexEntry (const uint8_t *pFlagIn, uint32_t iFlagLengthIn);
     };
 
 }

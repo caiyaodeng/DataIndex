@@ -5,7 +5,7 @@ namespace NS_DataIndex {
     TableSpace::TableSpace ()
         :
         m_iInitBlockNum (0),
-        m_iNewExpandBlockNum (0),
+        m_iExtendedBlockNum (0),
         m_objTableSet (NULL),
         m_pHeadBlockSerialNum (NULL) {
             m_objTableSet = new TableSet ();
@@ -26,7 +26,7 @@ namespace NS_DataIndex {
 
     /**
      * 说明：递归释放本对象
-     * 参数：B+树管理对象节点
+     * 参数：链表管理对象节点
      * 更新时间：2016/1/30*/
     void TableSpace::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
 
@@ -50,9 +50,9 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setNewExpandBlockNumber (uint32_t iNewExpandBlockNum) {
-        m_iNewExpandBlockNum = iNewExpandBlockNum;
-        if (m_iNewExpandBlockNum == 0) {
+    bool TableSpace::setExtendedBlockNumber (uint32_t iExtendedBlockNum) {
+        m_iExtendedBlockNum = iExtendedBlockNum;
+        if (m_iExtendedBlockNum == 0) {
             return false;
         }
         return true;
@@ -70,13 +70,40 @@ namespace NS_DataIndex {
      * 说明：获取新扩充块数
      * 返回值：新扩充块数
      * 更新时间：2016/1/28*/
-    uint32_t TableSpace::getNewExpandBlockNumber () {
-        return m_iNewExpandBlockNum;
+    uint32_t TableSpace::getExtendedBlockNumber () {
+        return m_iExtendedBlockNum;
     }
 
     /**
-     * 说明：新增一个B+树管理对象
-     * 参数：新的B+树管理对象
+     * 说明：添加一个类型
+     * 参数：数据类型结构信息
+     * 返回值：是否添加成功
+     * 更新时间：2016/1/30*/
+    bool TableSpace::addDataType (const uint8_t *pDataTypeNameIn) {
+        return true;
+    }
+
+    /**
+     * 说明：删除一个类型
+     * 参数：数据类型名称
+     * 返回值：是否删除成功
+     * 更新时间：2016/1/30*/
+    bool TableSpace::deleteDataType (const uint8_t *pDataTypeNameIn) {
+        return true;
+    }
+
+    /**
+     * 说明：查询一个类型
+     * 参数：数据类型名称
+     * 返回值：是否找到
+     * 更新时间：2016/1/30*/
+    bool TableSpace::quaryDataType (const uint8_t *pDataTypeNameIn) {
+        return true;
+    }
+
+    /**
+     * 说明：新增一个链表管理对象
+     * 参数：新的链表管理对象
      * 返回值：是否增加成功
      * 更新时间：2016/1/30*/
     bool TableSpace::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
@@ -84,9 +111,19 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：查询一个B+树管理对象
+     * 说明：删除一个链表管理对象
      * 参数：块编号
-     * 返回值：一个B+树管理对象
+     * 返回值：是否删除成功
+     * 更新时间：2016/1/30*/
+    bool TableSpace::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+        return true;
+    }
+
+
+    /**
+     * 说明：查询一个链表管理对象
+     * 参数：块编号
+     * 返回值：一个链表管理对象
      * 更新时间：2016/1/30*/
     const
     BlockSerialNumEntry *TableSpace::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {

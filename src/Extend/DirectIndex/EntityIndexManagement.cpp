@@ -1,4 +1,4 @@
-#include "../../../include/Extend/B+tree/EntityIndexManagement.h"
+#include "../../../include/Extend/DirectIndex/EntityIndexManagement.h"
 
 namespace NS_DataIndex {
 
@@ -39,7 +39,7 @@ namespace NS_DataIndex {
     }
 
     /**
-     * 说明：获取
+     * 说明：获取块号
      * 返回值：块号
      * 更新时间：2016/1/30*/
     uint32_t BlockSerialNumEntry::getBlockSerialNumber () {

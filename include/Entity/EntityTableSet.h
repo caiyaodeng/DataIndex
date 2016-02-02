@@ -12,7 +12,7 @@ namespace NS_DataIndex {
     class TableSet {
 
         uint32_t m_iTableTotalNum;                                       //表总数
-        SingleTablePropertyStructure *m_objSingleTablePropertyStructure; //单表属性结构对象
+        SingleTablePropertyStructure *m_pSingleTablePropertyStructureSet;//单表属性结构对象
 
     public:
         explicit
