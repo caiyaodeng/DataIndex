@@ -12,7 +12,7 @@ namespace NS_DataIndex {
     class SingleTablePropertyStructure {
 
         CustomTableProperty *m_pHeadCustomTableProperty;    //自定义表属性对象
-        uint32_t m_iTablePropertyNum;                      //表属性数量
+        uint32_t m_iTablePropertyNum;                        //表属性数量
 
         public:
             explicit

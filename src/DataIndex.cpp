@@ -5,7 +5,8 @@
 	> Created Time: Sat 30 Jan 2016 02:41:27 AM EST
  ************************************************************************/
 
-#include<iostream>
+#include <iostream>
+#include "../include/Entity/EntityCustomTableProperty.h"
 using namespace std;
 
 int main () {

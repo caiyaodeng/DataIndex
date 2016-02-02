@@ -13,10 +13,9 @@ namespace NS_DataIndex {
      * 更新时间：2016/1/28*/
     class CustomTableProperty {
 
-        CustomDataType *m_objCustomDataType;                //自定义数据类型对象
+        CustomDataType *m_pCustomDataType;         //自定义数据类型对象
 
-        EntityTypeValue <uint32_t>* iEntityTypeValue;       //自定义类型的值
-        EntityTypeValue <uint8_t*>* pEntityTypeValue;       //自定义类型的值
+        EntityTypeValue *m_pEntityTypeValue;       //自定义类型的值
 
         public:
         explicit
@@ -29,26 +28,13 @@ namespace NS_DataIndex {
          * 参数：自定义类型值
          * 返回值：是否设置成功
          * 更新时间：2016/2/1*/
-        bool setEntityTypeValue (uint8_t* tValue);
-
-        /**
-         * 说明：设置自定义类型值
-         * 参数：自定义类型值
-         * 返回值：是否设置成功
-         * 更新时间：2016/2/1*/
-        bool setEntityTypeValue (uint32_t tValue);
+        bool setEntityTypeValue (EntityTypeValue *tValue);
 
         /**
          * 说明：获取自定义类型值
          * 返回值：自定义类型值
          * 更新时间：2016/2/1*/
-        uint8_t* getEntityTypeValue ();
-
-        /**
-         * 说明：获取自定义类型值
-         * 返回值：自定义类型值
-         * 更新时间：2016/2/1*/
-        uint32_t getEntityTypeValue ();
+         EntityTypeValue *getEntityTypeValue ();
     };
 
 }
