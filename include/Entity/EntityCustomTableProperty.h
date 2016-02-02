@@ -6,7 +6,7 @@
 
 namespace NS_DataIndex {
 
-    template <typename T>
+//    template <typename T>
     /**
      * 说明：自定义表属性
      * 创建人：林宇斌

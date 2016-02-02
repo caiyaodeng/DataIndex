@@ -2,7 +2,7 @@
 #define _ENTITY_TABLE_SPACE_H_
 
 #include "EntityTableSet.h"
-#include "../DirectIndex/EntityIndexManagement.h"
+#include "../Extend/DirectIndex/EntityIndexManagement.h"
 
 namespace NS_DataIndex {
 

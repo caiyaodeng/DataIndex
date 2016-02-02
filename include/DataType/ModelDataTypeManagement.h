@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-#include "../DirectIndex/EntityIndexManagement.h"
+#include "../Extend/DirectIndex/EntityIndexManagement.h"
 #include "../Entity/EntitySingleDataIndexEntrySet.h"
 
 namespace NS_DataIndex {

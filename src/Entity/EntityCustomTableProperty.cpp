@@ -39,9 +39,9 @@ namespace NS_DataIndex {
      * 说明：获取自定义类型值
      * 返回值：自定义类型值
      * 更新时间：2016/2/1*/
-//    uint8_t* CustomTableProperty<uint8_t *>::getEntityTypeValue () {
-//        return pEntityTypeValue->m_tValue;
-//    }
+    uint8_t* CustomTableProperty<uint8_t *>::getEntityTypeValue () {
+        return pEntityTypeValue->m_tValue;
+    }
 
     uint32_t CustomTableProperty<uint32_t>::getEntityTypeValue () {
         return iEntityTypeValue->m_tValue;
