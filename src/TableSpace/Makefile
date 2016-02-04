@@ -8,7 +8,7 @@ all: $(OUT)
 
 LT_SRC = 
 
-mZLT_OBJ = $(LT_SRC:.cpp=.o) 
+LT_OBJ = $(LT_SRC:.cpp=.o) 
 
 
 $(LT_OBJ): %.o: %.cpp

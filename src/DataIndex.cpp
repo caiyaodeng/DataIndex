@@ -24,9 +24,7 @@ int main () {
 //    obj->m_is = true;
     obj->m_pStr = (uint8_t*)"ss";
 //    obj->m_unchar = (uint8_t)'m';
-    CustomTableProperty->setEntityTypeValue(obj);
-
-    objNew = CustomTableProperty->getEntityTypeValue();
+    CustomTableProperty->setEntityTypeValue(obj); objNew = CustomTableProperty->getEntityTypeValue();
     cout << "---------启动成功!--------" << endl;
     return 1;
 }
