@@ -28,7 +28,7 @@ namespace NS_DataIndex {
      * 返回值：是否设置成功
      * 更新时间：2016/2/1*/
     bool CustomTableProperty::setEntityTypeValue (EntityTypeValue *tValue) {
-        memcpy (m_pEntityTypeValue, tValue, EntityTypeValue);
+        memcpy (m_pEntityTypeValue, tValue, sizeof(EntityTypeValue));
         return true;
     }
 
