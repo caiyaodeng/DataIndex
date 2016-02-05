@@ -10,14 +10,14 @@ LT_SRC = EntityBlock.cpp\
 		 EntityDataIndexDataDocument.cpp\
 		 EntityDataTypeSet.cpp\
 		 EntityDataTypeStructure.cpp\
-		 EntityMyDataType.cpp\
-		 EntityMyTableProperty.cpp\
+		 EntityCustomDataType.cpp\
+		 EntityCustomTableProperty.cpp \
 		 EntitySingleDataIndexEntry.cpp\
 		 EntitySingleDataTypeInformation.cpp\
 		 EntitySingleTablePropertyStructure.cpp\
 		 EntityTableSet.cpp\
 		 EntityTableSpace.cpp
-mZLT_OBJ = $(LT_SRC:.cpp=.o) 
+LT_OBJ = $(LT_SRC:.cpp=.o) 
 
 
 $(LT_OBJ): %.o: %.cpp

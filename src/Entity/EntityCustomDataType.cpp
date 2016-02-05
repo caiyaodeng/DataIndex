@@ -1,5 +1,4 @@
 #include "../../include/Entity/EntityCustomDataType.h"
-
 namespace NS_DataIndex {
 
     CustomDataType::CustomDataType ()
