@@ -8,13 +8,11 @@ namespace NS_DataIndex {
         objParentheses (NULL) {
             objSquareBrackets = new SquareBrackets ();
             objSquareBrackets->m_iLen = 0;
-            objSquareBrackets->m_pBuf = (uint8_t *) malloc (4);
-            memset (objSquareBrackets->m_pBuf, 0, 4);
+            objSquareBrackets->m_pBuf = NULL;
 
             objParentheses = new Parentheses ();
             objParentheses->m_iLen = 0;
-            objParentheses->m_pBuf = (uint8_t *) malloc (4);
-            memset (objParentheses->m_pBuf, 0 ,4);
+            objParentheses->m_pBuf = NULL;
     }
 
     DataReciver::~DataReciver () {
