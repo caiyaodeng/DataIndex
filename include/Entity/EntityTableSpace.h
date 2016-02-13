@@ -10,7 +10,7 @@ namespace NS_DataIndex {
      * 说明：表空间
      * 创建人：林宇斌
      * 更新时间：2016/1/28*/
-    class TableSpace {
+    class EntityTableSpace {
 
         uint32_t m_iInitBlockNum;                           //初始块数量
         uint32_t m_iExtendedBlockNum;                       //新扩充块数
@@ -25,8 +25,8 @@ namespace NS_DataIndex {
 
     public:
         explicit
-        TableSpace ();
-        ~TableSpace ();
+        EntityTableSpace ();
+        ~EntityTableSpace ();
 
     public:
         /**

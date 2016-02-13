@@ -2,7 +2,7 @@
 
 namespace NS_DataIndex {
 
-    TableSpace::TableSpace ()
+    EntityTableSpace::EntityTableSpace ()
         :
         m_iInitBlockNum (0),
         m_iExtendedBlockNum (0),
@@ -12,7 +12,7 @@ namespace NS_DataIndex {
             m_pHeadBlockSerialNum = new BlockSerialNumEntryNode();
     }
 
-    TableSpace::~TableSpace () {
+    EntityTableSpace::~EntityTableSpace () {
         if (m_objTableSet != NULL) {
             delete m_objTableSet;
             m_objTableSet = NULL;
@@ -28,7 +28,7 @@ namespace NS_DataIndex {
      * 说明：递归释放本对象
      * 参数：链表管理对象节点
      * 更新时间：2016/1/30*/
-    void TableSpace::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
+    void EntityTableSpace::recursiveReleaseMemory (BlockSerialNumEntryNode *objNode) {
 
     }
 
@@ -37,7 +37,7 @@ namespace NS_DataIndex {
      * 参数：初始块数量
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setInitBlockNumber (uint32_t iInitBlockNum) {
+    bool EntityTableSpace::setInitBlockNumber (uint32_t iInitBlockNum) {
         m_iInitBlockNum = iInitBlockNum;
         if (m_iInitBlockNum == 0) {
             return false;
@@ -50,7 +50,7 @@ namespace NS_DataIndex {
      * 参数：新扩充块数
      * 返回值：是否设置成功
      * 更新时间：2016/1/28*/
-    bool TableSpace::setExtendedBlockNumber (uint32_t iExtendedBlockNum) {
+    bool EntityTableSpace::setExtendedBlockNumber (uint32_t iExtendedBlockNum) {
         m_iExtendedBlockNum = iExtendedBlockNum;
         if (m_iExtendedBlockNum == 0) {
             return false;
@@ -62,7 +62,7 @@ namespace NS_DataIndex {
      * 说明：获取初始块数量
      * 返回值：初始块数量
      * 更新时间：2016/1/28*/
-    uint32_t TableSpace::getInitBlockNumber () {
+    uint32_t EntityTableSpace::getInitBlockNumber () {
         return m_iInitBlockNum;
     }
 
@@ -70,7 +70,7 @@ namespace NS_DataIndex {
      * 说明：获取新扩充块数
      * 返回值：新扩充块数
      * 更新时间：2016/1/28*/
-    uint32_t TableSpace::getExtendedBlockNumber () {
+    uint32_t EntityTableSpace::getExtendedBlockNumber () {
         return m_iExtendedBlockNum;
     }
 
@@ -79,7 +79,7 @@ namespace NS_DataIndex {
      * 参数：数据类型结构信息
      * 返回值：是否添加成功
      * 更新时间：2016/1/30*/
-    bool TableSpace::addDataType (const uint8_t *pDataTypeNameIn) {
+    bool EntityTableSpace::addDataType (const uint8_t *pDataTypeNameIn) {
         return true;
     }
 
@@ -88,7 +88,7 @@ namespace NS_DataIndex {
      * 参数：数据类型名称
      * 返回值：是否删除成功
      * 更新时间：2016/1/30*/
-    bool TableSpace::deleteDataType (const uint8_t *pDataTypeNameIn) {
+    bool EntityTableSpace::deleteDataType (const uint8_t *pDataTypeNameIn) {
         return true;
     }
 
@@ -97,7 +97,7 @@ namespace NS_DataIndex {
      * 参数：数据类型名称
      * 返回值：是否找到
      * 更新时间：2016/1/30*/
-    bool TableSpace::quaryDataType (const uint8_t *pDataTypeNameIn) {
+    bool EntityTableSpace::quaryDataType (const uint8_t *pDataTypeNameIn) {
         return true;
     }
 
@@ -106,7 +106,7 @@ namespace NS_DataIndex {
      * 参数：新的链表管理对象
      * 返回值：是否增加成功
      * 更新时间：2016/1/30*/
-    bool TableSpace::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
+    bool EntityTableSpace::addBlockSerialNumEntry (const BlockSerialNumEntryNode *objBlockSerialNumEntryNodeIn) {
             return true;
     }
 
@@ -115,7 +115,7 @@ namespace NS_DataIndex {
      * 参数：块编号
      * 返回值：是否删除成功
      * 更新时间：2016/1/30*/
-    bool TableSpace::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+    bool EntityTableSpace::deleteBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
         return true;
     }
 
@@ -126,7 +126,7 @@ namespace NS_DataIndex {
      * 返回值：一个链表管理对象
      * 更新时间：2016/1/30*/
     const
-    BlockSerialNumEntry *TableSpace::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
+    BlockSerialNumEntry *EntityTableSpace::quaryBlockSerialNumEntry (uint32_t iBlockSerialNumIn) {
             return NULL;
     }
 

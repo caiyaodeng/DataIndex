@@ -12,7 +12,7 @@ extern "C" {
 namespace NS_DataIndex {
 
     /**
-     * 说明：我的数据类型
+     * 说明：自定义数据类型
      * 创建人：林宇斌
      * 更新时间：2016/1/28*/
     class CustomDataType {

@@ -12,6 +12,7 @@ namespace NS_DataIndex {
      * 更新时间：2016/2/5*/
     class DataReciver {
 
+    public:
         /*方括号类*/
         class SquareBrackets {
 
